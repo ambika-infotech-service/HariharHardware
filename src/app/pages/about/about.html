@@ -1,0 +1,111 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold mb-2">{{ translate('about.title') }}</h1>
+    <p class="lead mb-0">{{ translate('about.established') }}</p>
+  </div>
+</section>
+
+<!-- Story Section -->
+<section class="story-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="story-content">
+          <p class="lead">
+            {{ translate('about.story.p1') }}
+          </p>
+          <p>
+            {{ translate('about.story.p2') }}
+          </p>
+          <p>
+            {{ translate('about.story.p3') }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="features-section py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">{{ translate('about.why.title') }}</h2>
+    </div>
+    <div class="row g-4">
+      @for (feature of features; track feature.key) {
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card text-center">
+            <div class="feature-icon mb-3">
+              <i [class]="feature.icon"></i>
+            </div>
+            <h5 class="fw-bold">
+              {{ translate('about.why.' + feature.key + '.title') }}
+            </h5>
+            <p class="text-muted mb-0">
+              {{ translate('about.why.' + feature.key + '.desc') }}
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-4">Our Commitment</h2>
+        <div class="value-item mb-3">
+          <i class="bi bi-check-circle-fill text-primary me-2"></i>
+          <strong>Quality First:</strong> We source from trusted manufacturers with proven track records
+        </div>
+        <div class="value-item mb-3">
+          <i class="bi bi-check-circle-fill text-primary me-2"></i>
+          <strong>Fair Pricing:</strong> Competitive rates for both small orders and bulk quantities
+        </div>
+        <div class="value-item mb-3">
+          <i class="bi bi-check-circle-fill text-primary me-2"></i>
+          <strong>Reliable Supply:</strong> Maintained inventory of commonly needed items for quick supply
+        </div>
+        <div class="value-item mb-3">
+          <i class="bi bi-check-circle-fill text-primary me-2"></i>
+          <strong>Personal Service:</strong> Direct communication with knowledgeable staff
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="stats-card">
+          <div class="row text-center">
+            <div class="col-6 mb-4">
+              <div class="stat-item">
+                <h3 class="display-4 fw-bold text-primary mb-0">22+</h3>
+                <p class="text-muted mb-0">Years in Business</p>
+              </div>
+            </div>
+            <div class="col-6 mb-4">
+              <div class="stat-item">
+                <h3 class="display-4 fw-bold text-primary mb-0">1000+</h3>
+                <p class="text-muted mb-0">Happy Customers</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-item">
+                <h3 class="display-4 fw-bold text-primary mb-0">500+</h3>
+                <p class="text-muted mb-0">Product Varieties</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-item">
+                <h3 class="display-4 fw-bold text-primary mb-0">100%</h3>
+                <p class="text-muted mb-0">Customer Focus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

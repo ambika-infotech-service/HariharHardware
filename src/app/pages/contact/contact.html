@@ -1,0 +1,207 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold mb-2">{{ translate('contact.title') }}</h1>
+    <p class="lead mb-0">{{ translate('contact.subtitle') }}</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Contact Information -->
+      <div class="col-lg-4">
+        <div class="contact-info">
+          <h4 class="fw-bold mb-4">{{ translate('footer.contactInfo') }}</h4>
+
+          <div class="info-item mb-4">
+            <div class="info-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="info-content">
+              <h6 class="fw-bold mb-1">{{ translate('contact.info.address') }}</h6>
+              <p class="mb-0">{{ translate('contact.info.addressValue') }}</p>
+            </div>
+          </div>
+
+          <div class="info-item mb-4">
+            <div class="info-icon">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="info-content">
+              <h6 class="fw-bold mb-1">{{ translate('contact.info.phone') }}</h6>
+              <a [href]="'tel:' + phoneNumber" class="text-decoration-none">
+                +91 98765 43210
+              </a>
+            </div>
+          </div>
+
+          <div class="info-item mb-4">
+            <div class="info-icon">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+            <div class="info-content">
+              <h6 class="fw-bold mb-1">{{ translate('contact.info.whatsapp') }}</h6>
+              <a
+                [href]="'https://wa.me/' + whatsappNumber"
+                class="text-decoration-none"
+                target="_blank">
+                {{ translate('home.cta.whatsappButton') }}
+              </a>
+            </div>
+          </div>
+
+          <div class="info-item mb-4">
+            <div class="info-icon">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div class="info-content">
+              <h6 class="fw-bold mb-1">{{ translate('contact.info.email') }}</h6>
+              <a [href]="'mailto:' + email" class="text-decoration-none">
+                {{ email }}
+              </a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="bi bi-clock-fill"></i>
+            </div>
+            <div class="info-content">
+              <h6 class="fw-bold mb-1">{{ translate('contact.info.hours') }}</h6>
+              <p class="mb-1">{{ translate('contact.info.hoursValue') }}</p>
+              <p class="text-muted mb-0">{{ translate('contact.info.sundayValue') }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="contact-form-wrapper">
+          <h4 class="fw-bold mb-4">{{ translate('contact.form.title') }}</h4>
+
+          @if (submitted()) {
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+              <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+              <div>{{ translate('contact.form.success') }}</div>
+            </div>
+          }
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">
+                  {{ translate('contact.form.name') }} <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  formControlName="name"
+                  [class.is-invalid]="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+                @if (getErrorMessage('name')) {
+                  <div class="invalid-feedback">
+                    {{ getErrorMessage('name') }}
+                  </div>
+                }
+              </div>
+
+              <div class="col-md-6">
+                <label for="phone" class="form-label">
+                  {{ translate('contact.form.phone') }} <span class="text-danger">*</span>
+                </label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  formControlName="phone"
+                  placeholder="9876543210"
+                  [class.is-invalid]="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid">
+                @if (getErrorMessage('phone')) {
+                  <div class="invalid-feedback">
+                    {{ getErrorMessage('phone') }}
+                  </div>
+                }
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">
+                  {{ translate('contact.form.email') }}
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  formControlName="email">
+              </div>
+
+              <div class="col-12">
+                <label for="message" class="form-label">
+                  {{ translate('contact.form.message') }} <span class="text-danger">*</span>
+                </label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="6"
+                  formControlName="message"
+                  [placeholder]="translate('contact.form.messagePlaceholder')"
+                  [class.is-invalid]="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"></textarea>
+                @if (getErrorMessage('message')) {
+                  <div class="invalid-feedback">
+                    {{ getErrorMessage('message') }}
+                  </div>
+                }
+              </div>
+
+              <div class="col-12">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+                  [disabled]="submitting()">
+                  @if (submitting()) {
+                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    Sending...
+                  } @else {
+                    <i class="bi bi-send-fill me-2"></i>
+                    {{ translate('contact.form.submit') }}
+                  }
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Actions -->
+<section class="quick-actions py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <a [href]="'tel:' + phoneNumber" class="quick-action-card text-decoration-none">
+          <i class="bi bi-telephone-fill"></i>
+          <h5 class="fw-bold mt-3 mb-2">Call Us Now</h5>
+          <p class="text-muted mb-0">Speak directly with our team</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a [href]="'https://wa.me/' + whatsappNumber" class="quick-action-card text-decoration-none" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+          <h5 class="fw-bold mt-3 mb-2">WhatsApp</h5>
+          <p class="text-muted mb-0">Chat with us instantly</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a [href]="'mailto:' + email" class="quick-action-card text-decoration-none">
+          <i class="bi bi-envelope-fill"></i>
+          <h5 class="fw-bold mt-3 mb-2">Email Us</h5>
+          <p class="text-muted mb-0">Send detailed requirements</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

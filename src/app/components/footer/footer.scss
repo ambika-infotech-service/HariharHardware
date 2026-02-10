@@ -1,0 +1,22 @@
+.footer {
+  a {
+    transition: color 0.2s ease;
+    color: rgba(255, 255, 255, 0.95) !important;
+
+    &:hover {
+      color: #e67e22 !important;
+    }
+  }
+
+  h5, h6 {
+    color: #fff !important;
+  }
+
+  p, li, span {
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  i {
+    color: #e67e22;
+  }
+}

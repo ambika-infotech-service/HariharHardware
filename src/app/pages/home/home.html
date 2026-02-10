@@ -1,0 +1,107 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold mb-3">{{ translate('home.headline') }}</h1>
+        <p class="lead mb-4">{{ translate('home.subheadline') }}</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a [href]="'tel:' + phoneNumber" class="btn btn-light btn-lg">
+            <i class="bi bi-telephone-fill me-2"></i>
+            {{ translate('home.cta.callButton') }}
+          </a>
+          <a
+            [href]="'https://wa.me/' + whatsappNumber"
+            class="btn btn-success btn-lg"
+            target="_blank">
+            <i class="bi bi-whatsapp me-2"></i>
+            {{ translate('home.cta.whatsappButton') }}
+          </a>
+          <a routerLink="/contact" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-envelope-fill me-2"></i>
+            {{ translate('home.cta.quoteButton') }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Value Propositions -->
+<section class="value-props py-5">
+  <div class="container">
+    <div class="row g-4">
+      @for (prop of valueProps; track prop.key) {
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm text-center p-4">
+            <div class="card-body">
+              <div class="icon-circle mb-3">
+                <i [class]="prop.icon"></i>
+              </div>
+              <h5 class="card-title fw-bold">
+                {{ translate('home.valueProps.' + prop.key + '.title') }}
+              </h5>
+              <p class="card-text text-muted">
+                {{ translate('home.valueProps.' + prop.key + '.desc') }}
+              </p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Product Categories -->
+<section class="categories py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">{{ translate('home.categories.title') }}</h2>
+    </div>
+    <div class="row g-4">
+      @for (category of categories; track category.key) {
+        <div class="col-md-4 col-sm-6">
+          <div class="category-card">
+            <div class="category-icon">
+              <i [class]="category.icon"></i>
+            </div>
+            <h5 class="fw-bold">
+              {{ translate('home.categories.' + category.key) }}
+            </h5>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="text-center mt-5">
+      <a routerLink="/products" class="btn btn-primary btn-lg">
+        {{ translate('nav.products') }}
+        <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="fw-bold mb-3">{{ translate('home.cta.title') }}</h2>
+        <p class="lead mb-4">{{ translate('home.cta.desc') }}</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a [href]="'tel:' + phoneNumber" class="btn btn-light btn-lg">
+            <i class="bi bi-telephone-fill me-2"></i>
+            +91 98765 43210
+          </a>
+          <a
+            [href]="'https://wa.me/' + whatsappNumber"
+            class="btn btn-light btn-lg"
+            target="_blank">
+            <i class="bi bi-whatsapp me-2"></i>
+            {{ translate('home.cta.whatsappButton') }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/">
+      <i class="bi bi-tools me-2"></i>
+      Harihar Hardware & Paints
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="toggleMobileMenu()"
+      [attr.aria-expanded]="mobileMenuOpen"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [class.show]="mobileMenuOpen">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            (click)="closeMobileMenu()">
+            {{ translate('nav.home') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/products"
+            routerLinkActive="active"
+            (click)="closeMobileMenu()">
+            {{ translate('nav.products') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/about"
+            routerLinkActive="active"
+            (click)="closeMobileMenu()">
+            {{ translate('nav.about') }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="closeMobileMenu()">
+            {{ translate('nav.contact') }}
+          </a>
+        </li>
+      </ul>
+
+      <div class="language-selector ms-lg-3 mt-2 mt-lg-0">
+        <button
+          type="button"
+          class="btn btn-sm me-1"
+          [class.btn-primary]="language() === 'en'"
+          [class.btn-outline-light]="language() !== 'en'"
+          (click)="setLanguage('en')">
+          EN
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm me-1"
+          [class.btn-primary]="language() === 'gu'"
+          [class.btn-outline-light]="language() !== 'gu'"
+          (click)="setLanguage('gu')">
+          ગુ
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm me-1"
+          [class.btn-primary]="language() === 'hi'"
+          [class.btn-outline-light]="language() !== 'hi'"
+          (click)="setLanguage('hi')">
+          हि
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm"
+          [class.btn-primary]="language() === 'mr'"
+          [class.btn-outline-light]="language() !== 'mr'"
+          (click)="setLanguage('mr')">
+          म
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

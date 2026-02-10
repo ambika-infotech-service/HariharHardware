@@ -1,0 +1,91 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <h1 class="display-5 fw-bold mb-2">{{ translate('products.title') }}</h1>
+    <p class="lead mb-0">{{ translate('products.subtitle') }}</p>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="products-section py-5">
+  <div class="container">
+    <div class="row g-4">
+      @for (category of productCategories; track category.key) {
+        <div class="col-lg-6">
+          <div class="product-category-card">
+            <div class="d-flex align-items-start">
+              <div class="category-icon me-3">
+                <i [class]="category.icon"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h4 class="fw-bold mb-3">
+                  {{ translate('products.categories.' + category.key + '.title') }}
+                </h4>
+                <p class="text-muted mb-0">
+                  {{ translate('products.categories.' + category.key + '.items') }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Contact Notice -->
+    <div class="contact-notice mt-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <div class="alert alert-info">
+            <i class="bi bi-info-circle-fill me-2"></i>
+            {{ translate('products.contact') }}
+          </div>
+          <a routerLink="/contact" class="btn btn-primary btn-lg">
+            <i class="bi bi-envelope-fill me-2"></i>
+            {{ translate('nav.contact') }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional Services -->
+<section class="services-section py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-card text-center">
+          <div class="service-icon mb-3">
+            <i class="bi bi-box-seam"></i>
+          </div>
+          <h5 class="fw-bold">Bulk Orders</h5>
+          <p class="text-muted mb-0">
+            Special pricing and arrangements for large quantity orders
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card text-center">
+          <div class="service-icon mb-3">
+            <i class="bi bi-truck"></i>
+          </div>
+          <h5 class="fw-bold">Quick Supply</h5>
+          <p class="text-muted mb-0">
+            Fast delivery for commonly stocked items in the local area
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card text-center">
+          <div class="service-icon mb-3">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <h5 class="fw-bold">Expert Guidance</h5>
+          <p class="text-muted mb-0">
+            Help with product selection and specifications for your project
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

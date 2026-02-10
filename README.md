@@ -1,59 +1,142 @@
-# HariharHardware
+# Harihar Hardware - Business Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+A professional, production-ready website for a hardware and pipe fittings business. Built with Angular 21, Bootstrap 5, and featuring multi-language support (English, Gujarati, Hindi, Marathi).
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-21.1-red)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)
 
-To start a local development server, run:
+## 🚀 Quick Start
 
-```bash
-ng serve
-```
+\`\`\`bash
+# Install dependencies
+npm install
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# Run development server
+npm start
 
-## Code scaffolding
+# Build for production
+npm run build
+\`\`\`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Visit \`http://localhost:4200/\` to see the website.
 
-```bash
-ng generate component component-name
-```
+## ✨ Features
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- 🌐 **Multi-language** - English, Gujarati, Hindi, Marathi
+- 📱 **Fully Responsive** - Works on all devices
+- ⚡ **Fast & Modern** - Angular 21 with lazy loading
+- 🎨 **Professional Design** - Industrial-themed Bootstrap UI
+- 📧 **Contact Form** - With validation
+- ♿ **Accessible** - WCAG AA compliant
+- 🔒 **SEO-Friendly** - Semantic HTML structure
 
-```bash
-ng generate --help
-```
+## 📄 Pages
 
-## Building
+- **Home** - Hero section with value propositions and product categories
+- **Products** - Comprehensive catalog of pipes, fittings, valves, and accessories
+- **About** - Company history and why choose us
+- **Contact** - Contact form with business information
 
-To build the project run:
+## 📚 Documentation
 
-```bash
-ng build
-```
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed information on:
+- Customization guide
+- Adding new pages and features
+- Contact form integration
+- Deployment instructions
+- SEO optimization
+- Troubleshooting
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🛠️ Technology Stack
 
-## Running unit tests
+- **Framework**: Angular 21.1
+- **UI Library**: Bootstrap 5.3
+- **Icons**: Bootstrap Icons
+- **Language**: TypeScript 5.9
+- **Styling**: SCSS
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 📞 Contact Information
 
-```bash
-ng test
-```
+**NOTE:** Update the following in the code before deployment:
+- Phone: \`+919876543210\` (placeholder)
+- Email: \`info@hariharhardware.com\` (placeholder)
+- WhatsApp: \`919876543210\` (placeholder)
 
-## Running end-to-end tests
+## 🏗️ Project Structure
 
-For end-to-end (e2e) testing, run:
+\`\`\`
+src/app/
+├── components/
+│   ├── header/          # Navigation with language switcher
+│   └── footer/          # Footer with links
+├── pages/
+│   ├── home/            # Landing page
+│   ├── products/        # Products catalog
+│   ├── about/           # About us
+│   └── contact/         # Contact form
+└── services/
+    └── language.service.ts  # Multi-language support
+\`\`\`
 
-```bash
-ng e2e
-```
+## 🌍 Multi-Language Support
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The website supports 4 languages with automatic persistence:
+- **English** (EN) - Default
+- **Gujarati** (ગુ)
+- **Hindi** (हि)
+- **Marathi** (म)
 
-## Additional Resources
+Language preference is saved to browser localStorage.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🔧 Customization
+
+### Update Business Info
+
+Edit contact details in:
+- \`src/app/pages/home/home.ts\`
+- \`src/app/pages/contact/contact.ts\`
+- \`src/app/components/footer/footer.html\`
+
+### Change Colors
+
+Main brand colors are in component SCSS files. Edit the gradient colors:
+- Primary: \`#2c3e50\` and \`#3498db\`
+- Secondary: \`#34495e\`
+
+### Add/Edit Content
+
+All translations are in \`src/app/services/language.service.ts\`
+
+## 🚀 Deployment
+
+### Build
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+Output will be in \`dist/harihar-hardware/browser/\`
+
+### Deploy To
+
+- **Netlify**: \`netlify deploy --prod --dir=dist/harihar-hardware/browser\`
+- **Vercel**: \`vercel --prod\`
+- **Traditional Hosting**: Upload files from dist folder
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
+
+## 📝 Scripts
+
+- \`npm start\` - Start development server
+- \`npm run build\` - Build for production
+- \`npm test\` - Run tests
+- \`npm run watch\` - Build in watch mode
+
+## 🙏 Established in 2002
+
+Serving contractors, plumbers, builders, and industrial buyers for over 22 years.
+
+---
+
+For detailed documentation, see [DEPLOYMENT.md](DEPLOYMENT.md)

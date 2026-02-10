@@ -1,0 +1,95 @@
+<footer class="footer bg-dark text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">
+          <i class="bi bi-tools me-2"></i>
+          Harihar Hardware & Paints
+        </h5>
+        <p class="text-light-emphasis">
+          {{ translate('footer.aboutText') }}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">{{ translate('footer.quickLinks') }}</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a routerLink="/" class="text-light-emphasis text-decoration-none">
+              {{ translate('nav.home') }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/products" class="text-light-emphasis text-decoration-none">
+              {{ translate('nav.products') }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/about" class="text-light-emphasis text-decoration-none">
+              {{ translate('nav.about') }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/contact" class="text-light-emphasis text-decoration-none">
+              {{ translate('nav.contact') }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">{{ translate('footer.contactInfo') }}</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            <span class="text-light-emphasis small">
+              {{ translate('contact.info.addressValue') }}
+            </span>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-telephone-fill me-2"></i>
+            <a href="tel:+919876543210" class="text-light-emphasis text-decoration-none">
+              +91 98765 43210
+            </a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-whatsapp me-2"></i>
+            <a href="https://wa.me/919876543210" class="text-light-emphasis text-decoration-none" target="_blank">
+              WhatsApp
+            </a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-envelope-fill me-2"></i>
+            <a href="mailto:info@hariharhardware.com" class="text-light-emphasis text-decoration-none">
+              info&#64;hariharhardware.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Business Hours -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">{{ translate('footer.hours') }}</h6>
+        <p class="text-light-emphasis mb-2">
+          {{ translate('footer.hoursText') }}
+        </p>
+        <p class="text-light-emphasis mb-1">
+          {{ translate('footer.sundayText') }}
+        </p>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0 text-light-emphasis">
+          {{ translate('footer.copyright') }}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
