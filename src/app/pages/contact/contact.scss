@@ -105,6 +105,21 @@
   }
 }
 
+.map-section {
+  background: #f8f9fa;
+
+  .map-container {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+    iframe {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
 .quick-actions {
   .quick-action-card {
     background: white;

@@ -209,6 +209,29 @@
   </div>
 </section>
 
+<!-- Map Section -->
+<section class="map-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="fw-bold mb-4 text-center">{{ translate('contact.map.title') }}</h4>
+        <div class="map-container rounded overflow-hidden shadow-sm">
+          <iframe
+            [src]="mapEmbedUrl"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Harihar Hardware Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Quick Actions -->
 <section class="quick-actions py-5 bg-light">
   <div class="container">

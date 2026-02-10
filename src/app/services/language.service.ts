@@ -132,6 +132,9 @@ export class LanguageService {
           googleBusiness: 'Google Business',
           viewProfile: 'View Our Profile'
         },
+        map: {
+          title: 'Find Us on the Map'
+        },
         form: {
           title: 'Send Us Your Requirements',
           name: 'Your Name',
@@ -276,6 +279,9 @@ export class LanguageService {
           getDirections: 'Google નકશા પર જુઓ',
           googleBusiness: 'Google બિઝનેસ',
           viewProfile: 'અમારી પ્રોફાઇલ જુઓ'
+        },
+        map: {
+          title: 'નકશા પર અમને શોધો'
         },
         form: {
           title: 'અમને તમારી જરૂરિયાતો મોકલો',
@@ -422,6 +428,9 @@ export class LanguageService {
           googleBusiness: 'Google व्यवसाय',
           viewProfile: 'हमारी प्रोफाइल देखें'
         },
+        map: {
+          title: 'नक्शे पर हमें खोजें'
+        },
         form: {
           title: 'हमें अपनी आवश्यकताएं भेजें',
           name: 'आपका नाम',
@@ -566,6 +575,9 @@ export class LanguageService {
           getDirections: 'Google नकाशावर पहा',
           googleBusiness: 'Google व्यवसाय',
           viewProfile: 'आमची प्रोफाइल पहा'
+        },
+        map: {
+          title: 'नकाशावर आम्हाला शोधा'
         },
         form: {
           title: 'आम्हाला तुमच्या गरजा पाठवा',
