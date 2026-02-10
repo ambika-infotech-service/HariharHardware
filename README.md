@@ -59,9 +59,9 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed information on:
 ## 📞 Contact Information
 
 **NOTE:** Update the following in the code before deployment:
-- Phone: \`+919876543210\` (placeholder)
-- Email: \`info@hariharhardware.com\` (placeholder)
-- WhatsApp: \`919876543210\` (placeholder)
+- Phone: \`+919898659470\` (placeholder)
+- Email: \`rajeshrpatel30@gmail.com\` (placeholder)
+- WhatsApp: \`919898659470\` (placeholder)
 
 ## 🏗️ Project Structure
 

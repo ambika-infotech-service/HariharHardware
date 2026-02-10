@@ -51,20 +51,32 @@
           </li>
           <li class="mb-2">
             <i class="bi bi-telephone-fill me-2"></i>
-            <a href="tel:+919876543210" class="text-light-emphasis text-decoration-none">
-              +91 98765 43210
+            <a href="tel:+919898659470" class="text-light-emphasis text-decoration-none">
+              +91 98986 59470
             </a>
           </li>
           <li class="mb-2">
             <i class="bi bi-whatsapp me-2"></i>
-            <a href="https://wa.me/919876543210" class="text-light-emphasis text-decoration-none" target="_blank">
+            <a href="https://wa.me/919898659470" class="text-light-emphasis text-decoration-none" target="_blank">
               WhatsApp
             </a>
           </li>
           <li class="mb-2">
             <i class="bi bi-envelope-fill me-2"></i>
-            <a href="mailto:info@hariharhardware.com" class="text-light-emphasis text-decoration-none">
+            <a href="mailto:rajeshrpatel30@gmail.com" class="text-light-emphasis text-decoration-none">
               info&#64;hariharhardware.com
+            </a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-map-fill me-2"></i>
+            <a [href]="googleMapsUrl" class="text-light-emphasis text-decoration-none" target="_blank" rel="noopener noreferrer">
+              {{ translate('footer.getDirections') }}
+            </a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-google me-2"></i>
+            <a [href]="googleBusinessUrl" class="text-light-emphasis text-decoration-none" target="_blank" rel="noopener noreferrer">
+              {{ translate('footer.googleProfile') }}
             </a>
           </li>
         </ul>

@@ -32,7 +32,7 @@
             <div class="info-content">
               <h6 class="fw-bold mb-1">{{ translate('contact.info.phone') }}</h6>
               <a [href]="'tel:' + phoneNumber" class="text-decoration-none">
-                +91 98765 43210
+                +91 98986 59470
               </a>
             </div>
           </div>
@@ -64,7 +64,7 @@
             </div>
           </div>
 
-          <div class="info-item">
+          <div class="info-item mb-4">
             <div class="info-icon">
               <i class="bi bi-clock-fill"></i>
             </div>
@@ -72,6 +72,38 @@
               <h6 class="fw-bold mb-1">{{ translate('contact.info.hours') }}</h6>
               <p class="mb-1">{{ translate('contact.info.hoursValue') }}</p>
               <p class="text-muted mb-0">{{ translate('contact.info.sundayValue') }}</p>
+            </div>
+          </div>
+
+          <div class="info-item mb-4">
+            <div class="info-icon">
+              <i class="bi bi-map-fill"></i>
+            </div>
+            <div class="info-content">
+              <h6 class="fw-bold mb-1">{{ translate('contact.info.directions') }}</h6>
+              <a
+                [href]="googleMapsUrl"
+                class="text-decoration-none"
+                target="_blank"
+                rel="noopener noreferrer">
+                {{ translate('contact.info.getDirections') }}
+              </a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="bi bi-google"></i>
+            </div>
+            <div class="info-content">
+              <h6 class="fw-bold mb-1">{{ translate('contact.info.googleBusiness') }}</h6>
+              <a
+                [href]="googleBusinessUrl"
+                class="text-decoration-none"
+                target="_blank"
+                rel="noopener noreferrer">
+                {{ translate('contact.info.viewProfile') }}
+              </a>
             </div>
           </div>
         </div>
@@ -117,7 +149,7 @@
                   class="form-control"
                   id="phone"
                   formControlName="phone"
-                  placeholder="9876543210"
+                  placeholder="9898659470"
                   [class.is-invalid]="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid">
                 @if (getErrorMessage('phone')) {
                   <div class="invalid-feedback">

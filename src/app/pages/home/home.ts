@@ -15,8 +15,8 @@ export class HomeComponent {
     return this.languageService.translate(key);
   }
 
-  readonly phoneNumber = '+919876543210';
-  readonly whatsappNumber = '919876543210';
+  readonly phoneNumber = '+919898659470';
+  readonly whatsappNumber = '919898659470';
 
   protected readonly categories = [
     { icon: 'bi-pip', key: 'pipes' },

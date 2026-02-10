@@ -138,13 +138,13 @@ private translations: Record<Language, Translation> = {
 
 ```typescript
 // src/app/pages/home/home.ts
-readonly phoneNumber = '+919876543210';  // Replace with actual number
-readonly whatsappNumber = '919876543210';  // Replace with actual number
+readonly phoneNumber = '+919898659470';
+readonly whatsappNumber = '919898659470';
 
 // src/app/pages/contact/contact.ts
-readonly phoneNumber = '+919876543210';
-readonly whatsappNumber = '919876543210';
-readonly email = 'info@hariharhardware.com';  // Replace with actual email
+readonly phoneNumber = '+919898659470';
+readonly whatsappNumber = '919898659470';
+readonly email = 'rajeshrpatel30@gmail.com';
 ```
 
 **Footer Links** - Edit `src/app/components/footer/footer.html`

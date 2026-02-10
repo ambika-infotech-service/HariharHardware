@@ -126,7 +126,11 @@ export class LanguageService {
           addressValue: 'Ground floor, Krishna Complex, Opposite Ambika Dalvada, Gota Cross Road, Ahmedabad-382481',
           hours: 'Business Hours',
           hoursValue: 'Monday - Saturday: 8:00 AM - 8:00 PM',
-          sundayValue: 'Sunday: 8:00 AM - 1:00 PM'
+          sundayValue: 'Sunday: 8:00 AM - 1:00 PM',
+          directions: 'Get Directions',
+          getDirections: 'View on Google Maps',
+          googleBusiness: 'Google Business',
+          viewProfile: 'View Our Profile'
         },
         form: {
           title: 'Send Us Your Requirements',
@@ -151,7 +155,9 @@ export class LanguageService {
         hours: 'Business Hours',
         hoursText: 'Mon - Sat: 8:00 AM - 8:00 PM',
         sundayText: 'Sunday: 8:00 AM - 1:00 PM',
-        copyright: '© 2026 Harihar Hardware & Paints. All rights reserved.'
+        copyright: '© 2026 Harihar Hardware & Paints. All rights reserved.',
+        getDirections: 'Get Directions',
+        googleProfile: 'Google Profile'
       }
     },
     gu: {
@@ -265,7 +271,11 @@ export class LanguageService {
           addressValue: 'ગ્રાઉન્ડ ફ્લોર, કૃષ્ણા કામ્પ્લેક્સ, અમ્બિકા ડાળવાડા સામે, ગોતા ક્રોસ રોડ, અમદાવાદ-382481',
           hours: 'વ્યવસાય સમય',
           hoursValue: 'સોમવાર - શનિવાર: સવારે 8:00 - સાંજે 8:00',
-          sundayValue: 'રવિવાર: સવારે 8:00 - બપોરે 1:00'
+          sundayValue: 'રવિવાર: સવારે 8:00 - બપોરે 1:00',
+          directions: 'દિશાઓ મેળવો',
+          getDirections: 'Google નકશા પર જુઓ',
+          googleBusiness: 'Google બિઝનેસ',
+          viewProfile: 'અમારી પ્રોફાઇલ જુઓ'
         },
         form: {
           title: 'અમને તમારી જરૂરિયાતો મોકલો',
@@ -290,7 +300,9 @@ export class LanguageService {
         hours: 'વ્યવસાય સમય',
         hoursText: 'સોમ - શનિ: સવારે 8:00 - સાંજે 8:00',
         sundayText: 'રવિવાર: સવારે 8:00 - બપોરે 1:00',
-        copyright: '© 2026 હરિહર હાર્ડવેર & પેઇન્ટ્સ. બધા અધિકારો આરક્ષિત.'
+        copyright: '© 2026 હરિહર હાર્ડવેર & પેઇન્ટ્સ. બધા અધિકારો આરક્ષિત.',
+        getDirections: 'દિશાઓ મેળવો',
+        googleProfile: 'Google પ્રોફાઇલ'
       }
     },
     hi: {
@@ -404,7 +416,11 @@ export class LanguageService {
           addressValue: 'ग्राउंड फ्लोर, कृष्णा कॉम्प्लेक्स, अंबिका दालवाडा के सामने, गोता क्रॉस रोड, अहमदाबाद-382481',
           hours: 'व्यवसाय समय',
           hoursValue: 'सोमवार - शनिवार: सुबह 8:00 - शाम 8:00',
-          sundayValue: 'रविवार: सुबह 8:00 - दोपहर 1:00'
+          sundayValue: 'रविवार: सुबह 8:00 - दोपहर 1:00',
+          directions: 'दिशानिर्देश प्राप्त करें',
+          getDirections: 'Google मानचित्र पर देखें',
+          googleBusiness: 'Google व्यवसाय',
+          viewProfile: 'हमारी प्रोफाइल देखें'
         },
         form: {
           title: 'हमें अपनी आवश्यकताएं भेजें',
@@ -429,7 +445,9 @@ export class LanguageService {
         hours: 'व्यवसाय समय',
         hoursText: 'सोम - शनि: सुबह 8:00 - शाम 8:00',
         sundayText: 'रविवार: सुबह 8:00 - दोपहर 1:00',
-        copyright: '© 2026 हरिहर हार्डवेयर & पेंट्स। सर्वाधिकार सुरक्षित।'
+        copyright: '© 2026 हरिहर हार्डवेयर & पेंट्स। सर्वाधिकार सुरक्षित।',
+        getDirections: 'दिशानिर्देश प्राप्त करें',
+        googleProfile: 'Google प्रोफाइल'
       }
     },
     mr: {
@@ -543,7 +561,11 @@ export class LanguageService {
           addressValue: 'ग्राउंड फ्लोर, कृष्णा कॉम्प्लेक्स, अंबिका दाळवाडा समोर, गोता क्रॉस रोड, अहमदाबाद-382481',
           hours: 'व्यवसाय वेळ',
           hoursValue: 'सोमवार - शनिवार: सकाळी 8:00 - संध्याकाळी 8:00',
-          sundayValue: 'रविवार: सकाळी 8:00 - दुपारी 1:00'
+          sundayValue: 'रविवार: सकाळी 8:00 - दुपारी 1:00',
+          directions: 'दिशा मिळवा',
+          getDirections: 'Google नकाशावर पहा',
+          googleBusiness: 'Google व्यवसाय',
+          viewProfile: 'आमची प्रोफाइल पहा'
         },
         form: {
           title: 'आम्हाला तुमच्या गरजा पाठवा',
@@ -568,7 +590,9 @@ export class LanguageService {
         hours: 'व्यवसाय वेळ',
         hoursText: 'सोम - शनि: सकाळी 8:00 - संध्याकाळी 8:00',
         sundayText: 'रविवार: सकाळी 8:00 - दुपारी 1:00',
-        copyright: '© 2026 हरिहर हार्डवेअर & पेंट्स. सर्व हक्क राखीव.'
+        copyright: '© 2026 हरिहर हार्डवेअर & पेंट्स. सर्व हक्क राखीव.',
+        getDirections: 'दिशा मिळवा',
+        googleProfile: 'Google प्रोफाइल'
       }
     }
   };
