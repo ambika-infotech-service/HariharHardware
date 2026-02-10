@@ -31,9 +31,7 @@
             </div>
             <div class="info-content">
               <h6 class="fw-bold mb-1">{{ translate('contact.info.phone') }}</h6>
-              <a [href]="'tel:' + phoneNumber" class="text-decoration-none">
-                +91 98986 59470
-              </a>
+              <a [href]="'tel:' + phoneNumber" class="text-decoration-none"> +91 98986 59470 </a>
             </div>
           </div>
 
@@ -46,7 +44,8 @@
               <a
                 [href]="'https://wa.me/' + whatsappNumber"
                 class="text-decoration-none"
-                target="_blank">
+                target="_blank"
+              >
                 {{ translate('home.cta.whatsappButton') }}
               </a>
             </div>
@@ -85,7 +84,8 @@
                 [href]="googleMapsUrl"
                 class="text-decoration-none"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 {{ translate('contact.info.getDirections') }}
               </a>
             </div>
@@ -101,7 +101,8 @@
                 [href]="googleBusinessUrl"
                 class="text-decoration-none"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 {{ translate('contact.info.viewProfile') }}
               </a>
             </div>
@@ -132,7 +133,10 @@
                   class="form-control"
                   id="name"
                   formControlName="name"
-                  [class.is-invalid]="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+                  [class.is-invalid]="
+                    contactForm.get('name')?.touched && contactForm.get('name')?.invalid
+                  "
+                />
                 @if (getErrorMessage('name')) {
                   <div class="invalid-feedback">
                     {{ getErrorMessage('name') }}
@@ -150,7 +154,10 @@
                   id="phone"
                   formControlName="phone"
                   placeholder="9898659470"
-                  [class.is-invalid]="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid">
+                  [class.is-invalid]="
+                    contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid
+                  "
+                />
                 @if (getErrorMessage('phone')) {
                   <div class="invalid-feedback">
                     {{ getErrorMessage('phone') }}
@@ -162,11 +169,7 @@
                 <label for="email" class="form-label">
                   {{ translate('contact.form.email') }}
                 </label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  formControlName="email">
+                <input type="email" class="form-control" id="email" formControlName="email" />
               </div>
 
               <div class="col-12">
@@ -179,7 +182,10 @@
                   rows="6"
                   formControlName="message"
                   [placeholder]="translate('contact.form.messagePlaceholder')"
-                  [class.is-invalid]="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"></textarea>
+                  [class.is-invalid]="
+                    contactForm.get('message')?.touched && contactForm.get('message')?.invalid
+                  "
+                ></textarea>
                 @if (getErrorMessage('message')) {
                   <div class="invalid-feedback">
                     {{ getErrorMessage('message') }}
@@ -188,12 +194,13 @@
               </div>
 
               <div class="col-12">
-                <button
-                  type="submit"
-                  class="btn btn-primary btn-lg"
-                  [disabled]="submitting()">
+                <button type="submit" class="btn btn-primary btn-lg" [disabled]="submitting()">
                   @if (submitting()) {
-                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    <span
+                      class="spinner-border spinner-border-sm me-2"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
                     Sending...
                   } @else {
                     <i class="bi bi-send-fill me-2"></i>
@@ -220,11 +227,12 @@
             [src]="mapEmbedUrl"
             width="100%"
             height="450"
-            style="border:0;"
+            style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Harihar Hardware Location">
+            title="Harihar Hardware Location"
+          >
           </iframe>
         </div>
       </div>
@@ -244,7 +252,11 @@
         </a>
       </div>
       <div class="col-md-4">
-        <a [href]="'https://wa.me/' + whatsappNumber" class="quick-action-card text-decoration-none" target="_blank">
+        <a
+          [href]="'https://wa.me/' + whatsappNumber"
+          class="quick-action-card text-decoration-none"
+          target="_blank"
+        >
           <i class="bi bi-whatsapp"></i>
           <h5 class="fw-bold mt-3 mb-2">WhatsApp</h5>
           <p class="text-muted mb-0">Chat with us instantly</p>
