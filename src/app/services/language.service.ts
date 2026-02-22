@@ -147,7 +147,12 @@ export class LanguageService {
           nameRequired: 'Name is required',
           phoneRequired: 'Phone number is required',
           phoneInvalid: 'Please enter a valid 10-digit phone number',
-          messageRequired: 'Please describe your requirements'
+          messageRequired: 'Please describe your requirements',
+          comingSoon: 'Contact Form Coming Soon',
+          comingSoonDescription: 'Our contact form will be available shortly. In the meantime, please reach out to us directly:',
+          callUs: 'Call Us',
+          whatsapp: 'WhatsApp',
+          chatWithUs: 'Chat with us'
         }
       },
       footer: {
@@ -295,7 +300,12 @@ export class LanguageService {
           nameRequired: 'નામ જરૂરી છે',
           phoneRequired: 'ફોન નંબર જરૂરી છે',
           phoneInvalid: 'કૃપા કરીને માન્ય 10-અંકનો ફોન નંબર દાખલ કરો',
-          messageRequired: 'કૃપા કરીને તમારી જરૂરિયાતોનું વર્ણન કરો'
+          messageRequired: 'કૃપા કરીને તમારી જરૂરિયાતોનું વર્ણન કરો',
+          comingSoon: 'સંપર્ક ફોર્મ શીઘ્રમાં આવશે',
+          comingSoonDescription: 'અમારું સંપર્ક ફોર્મ શીઘ્રમાં ઉપલબ્ધ થશે. અત્યારે, કૃપા કરીને આપણાથી સીધો સંપર્ક કરો:',
+          callUs: 'અમને કૉલ કરો',
+          whatsapp: 'વોટ્સએપ',
+          chatWithUs: 'અમારો સંચાર કરો'
         }
       },
       footer: {
@@ -443,7 +453,12 @@ export class LanguageService {
           nameRequired: 'नाम आवश्यक है',
           phoneRequired: 'फोन नंबर आवश्यक है',
           phoneInvalid: 'कृपया एक मान्य 10-अंकीय फोन नंबर दर्ज करें',
-          messageRequired: 'कृपया अपनी आवश्यकताओं का वर्णन करें'
+          messageRequired: 'कृपया अपनी आवश्यकताओं का वर्णन करें',
+          comingSoon: 'संपर्क फ़ॉर्म जल्द आ रहा है',
+          comingSoonDescription: 'हमारा संपर्क फॉर्म शीघ्र ही उपलब्ध होगा। इस बीच, कृपया हमसे सीधे संपर्क करें:',
+          callUs: 'हमें कॉल करें',
+          whatsapp: 'व्हाट्सएप',
+          chatWithUs: 'हमारे साथ चैट करें'
         }
       },
       footer: {
@@ -591,7 +606,12 @@ export class LanguageService {
           nameRequired: 'नाव आवश्यक आहे',
           phoneRequired: 'फोन नंबर आवश्यक आहे',
           phoneInvalid: 'कृपया वैध 10-अंकी फोन नंबर प्रविष्ट करा',
-          messageRequired: 'कृपया तुमच्या गरजांचे वर्णन करा'
+          messageRequired: 'कृपया तुमच्या गरजांचे वर्णन करा',
+          comingSoon: 'संपर्क फॉर्म लवकरच येत आहे',
+          comingSoonDescription: 'आमचा संपर्क फॉर्म लवकरच उपलब्ध होईल. तोपर्यंत, कृपया आमच्याशी थेट संपर्क साधा:',
+          callUs: 'आमच्याला कॉल करा',
+          whatsapp: 'व्हाट्सअॅप',
+          chatWithUs: 'आमच्याशी चॅट करा'
         }
       },
       footer: {
