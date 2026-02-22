@@ -1,16 +1,16 @@
 .footer {
   a {
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
     color: rgba(255, 255, 255, 0.95) !important;
 
     &:hover {
-      color: #e67e22 !important;
+      color: var(--color-primary) !important;
     }
   }
 
   h5,
   h6 {
-    color: #fff !important;
+    color: var(--color-white) !important;
   }
 
   p,
@@ -20,6 +20,6 @@
   }
 
   i {
-    color: #e67e22;
+    color: var(--color-primary);
   }
 }
