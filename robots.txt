@@ -1,0 +1,20 @@
+# robots.txt for Harihar Hardware
+User-agent: *
+Allow: /
+
+# Sitemap location (update with actual domain when deployed)
+Sitemap: https://hariharhardware.ambikainfotech.online/sitemap.xml
+
+# Disallow admin or private areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
