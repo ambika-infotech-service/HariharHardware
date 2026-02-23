@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,21 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   private languageService = inject(LanguageService);
+  private seo = inject(SeoService);
+
+  ngOnInit(): void {
+    this.seo.updateMetaTags({
+      title: 'Harihar Hardware - Premium Pipes, Valves & Fittings in Ahmedabad Since 2002',
+      description: 'Your trusted supplier for quality pipes, valves, fittings, and plumbing solutions in Ahmedabad, Gujarat since 2002. Premium quality hardware at competitive prices.',
+      keywords: 'hardware store Ahmedabad, pipes Gujarat, valves fittings, plumbing supplies, pipe fittings Ahmedabad, industrial supplies, Harihar Hardware',
+      ogTitle: 'Harihar Hardware - Premium Pipes, Valves & Fittings in Ahmedabad',
+      ogDescription: 'Quality Hardware & Pipe Fittings Since 2002. Your trusted supplier for pipes, valves, and plumbing solutions.',
+      ogUrl: 'https://hariharhardware.ambikainfotech.online/',
+      canonical: 'https://hariharhardware.ambikainfotech.online/'
+    });
+  }
 
   translate(key: string): string {
     return this.languageService.translate(key);

@@ -1,7 +1,8 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from '../../services/language.service';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,10 +10,23 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   private fb = inject(FormBuilder);
   private languageService = inject(LanguageService);
   private sanitizer = inject(DomSanitizer);
+  private seo = inject(SeoService);
+
+  ngOnInit(): void {
+    this.seo.updateMetaTags({
+      title: 'Contact Us - Harihar Hardware | Get in Touch for Hardware Supplies',
+      description: 'Contact Harihar Hardware in Ahmedabad for all your pipe, valve, and fitting needs. Visit us at Gota, call +919898659470, or send us a message for a quick quote.',
+      keywords: 'contact Harihar Hardware, hardware store Gota, Ahmedabad contact, pipes valves Ahmedabad, get quote, hardware supplies contact',
+      ogTitle: 'Contact Harihar Hardware - Get in Touch',
+      ogDescription: 'Contact us for all your pipe, valve, and fitting needs. Call +919898659470 or visit us in Gota, Ahmedabad.',
+      ogUrl: 'https://hariharhardware.ambikainfotech.online/contact',
+      canonical: 'https://hariharhardware.ambikainfotech.online/contact'
+    });
+  }
 
   protected submitted = signal(false);
   protected submitting = signal(false);
