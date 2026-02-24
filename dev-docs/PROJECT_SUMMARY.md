@@ -212,7 +212,7 @@ The following placeholder values need to be updated:
 // Update these in the codebase:
 Phone: +919898659470
 WhatsApp: 919898659470
-Email: rajeshrpatel30@gmail.com
+Email: hariharhardwareandpaints@gmail.com
 ```
 
 ### Files to Update:

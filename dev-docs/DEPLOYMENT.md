@@ -144,7 +144,7 @@ readonly whatsappNumber = '919898659470';
 // src/app/pages/contact/contact.ts
 readonly phoneNumber = '+919898659470';
 readonly whatsappNumber = '919898659470';
-readonly email = 'rajeshrpatel30@gmail.com';
+readonly email = 'hariharhardwareandpaints@gmail.com';
 ```
 
 **Footer Links** - Edit `src/app/components/footer/footer.html`

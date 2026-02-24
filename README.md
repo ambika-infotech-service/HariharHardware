@@ -60,7 +60,7 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed information on:
 
 **NOTE:** Update the following in the code before deployment:
 - Phone: \`+919898659470\` (placeholder)
-- Email: \`rajeshrpatel30@gmail.com\` (placeholder)
+- Email: \`hariharhardwareandpaints@gmail.com\` (placeholder)
 - WhatsApp: \`919898659470\` (placeholder)
 
 ## 🏗️ Project Structure
