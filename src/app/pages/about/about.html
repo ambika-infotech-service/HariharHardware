@@ -22,8 +22,8 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <div class="story-card">
-          <p class="section-kicker">About Our Store</p>
-          <h2 class="section-title">Trusted Hardware Partner in Ahmedabad</h2>
+          <p class="section-kicker">{{ translate('about.story.kicker') }}</p>
+          <h2 class="section-title">{{ translate('about.story.title') }}</h2>
           <div class="story-content">
           <p class="lead">
             {{ translate('about.story.p1') }}
@@ -74,87 +74,36 @@
       <div class="col-lg-6 mb-4">
         <div class="content-stack">
           <div class="content-card">
-            <p class="section-kicker">Expertise</p>
-            <h2 class="section-title">Our Expertise & Product Range</h2>
+            <p class="section-kicker">{{ translate('about.expertise.kicker') }}</p>
+            <h2 class="section-title">{{ translate('about.expertise.title') }}</h2>
             <ul class="icon-list">
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Hardware tools and accessories
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Pipes and pipe fittings
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                PVC pipes and plumbing supplies
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Valves, fasteners, fittings, and stoppers
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Sanitaryware and bathroom fittings
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Power tools and hand tools
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Paints, coatings, and related accessories
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Building and construction materials
-              </li>
+              @for (item of expertiseItems; track $index) {
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  {{ item }}
+                </li>
+              }
             </ul>
           </div>
 
           <div class="content-card">
-            <p class="section-kicker">Why Us</p>
-            <h3 class="section-title-sm">Why Choose Harihar Hardware & Paint?</h3>
+            <p class="section-kicker">{{ translate('about.whyUs.kicker') }}</p>
+            <h3 class="section-title-sm">{{ translate('about.whyUs.title') }}</h3>
             <ul class="icon-list">
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Over 20+ years of experience in the hardware industry
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Trusted by contractors, plumbers, and builders
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Quality products from reliable brands
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Knowledgeable and helpful staff
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Competitive pricing with transparent dealings
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Convenient location at Gota Cross Road, opposite Ambika Dalvada
-              </li>
-              <li>
-                <i class="bi bi-check-circle-fill"></i>
-                Multiple payment options: Cash, UPI, BHIM, Paytm, Google Pay, Amazon Pay, and PhonePe
-              </li>
+              @for (reason of whyUsReasons; track $index) {
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  {{ reason }}
+                </li>
+              }
             </ul>
           </div>
 
           <div class="content-card">
-            <p class="section-kicker">Service</p>
-            <h3 class="section-title-sm">Customer-Focused Service</h3>
+            <p class="section-kicker">{{ translate('about.service.kicker') }}</p>
+            <h3 class="section-title-sm">{{ translate('about.service.title') }}</h3>
             <p class="muted-text">
-              Our team guides customers in selecting the right materials for their specific needs.
-              From small repairs to large construction projects, we aim to deliver prompt and
-              efficient service every time. We can also suggest reliable plumbers or electricians
-              when needed.
+              {{ translate('about.service.description') }}
             </p>
           </div>
         </div>
@@ -163,22 +112,18 @@
       <div class="col-lg-6 mb-4">
         <div class="content-stack">
           <div class="content-card">
-            <p class="section-kicker">Reliability</p>
-            <h3 class="section-title-sm">Serving Ahmedabad with Reliability</h3>
+            <p class="section-kicker">{{ translate('about.reliability.kicker') }}</p>
+            <h3 class="section-title-sm">{{ translate('about.reliability.title') }}</h3>
             <p class="muted-text">
-              Located on Gota Road, our store is easy to access for both new and regular customers.
-              We have earned trust through consistent service, honest advice, and dependable
-              products. We remain committed to expanding our range to meet Ahmedabad's growing
-              needs.
+              {{ translate('about.reliability.description') }}
             </p>
           </div>
 
           <div class="content-card highlight-card">
-            <p class="section-kicker">Visit</p>
-            <h3 class="section-title-sm">Visit Us Today</h3>
+            <p class="section-kicker">{{ translate('about.visit.kicker') }}</p>
+            <h3 class="section-title-sm">{{ translate('about.visit.title') }}</h3>
             <p class="muted-text mb-0">
-              If you are looking for a reliable hardware shop in Gota Road, Ahmedabad, visit Harihar
-              Hardware & Paint for quality products, expert guidance, and dependable service.
+              {{ translate('about.visit.description') }}
             </p>
           </div>
 
@@ -187,25 +132,25 @@
               <div class="col-6 mb-4">
                 <div class="stat-item">
                   <h3 class="display-4 fw-bold text-primary mb-0">22+</h3>
-                  <p class="text-muted mb-0">Years in Business</p>
+                  <p class="text-muted mb-0">{{ translate('about.stats.years') }}</p>
                 </div>
               </div>
               <div class="col-6 mb-4">
                 <div class="stat-item">
                   <h3 class="display-4 fw-bold text-primary mb-0">1000+</h3>
-                  <p class="text-muted mb-0">Happy Customers</p>
+                  <p class="text-muted mb-0">{{ translate('about.stats.customers') }}</p>
                 </div>
               </div>
               <div class="col-6">
                 <div class="stat-item">
                   <h3 class="display-4 fw-bold text-primary mb-0">500+</h3>
-                  <p class="text-muted mb-0">Product Varieties</p>
+                  <p class="text-muted mb-0">{{ translate('about.stats.products') }}</p>
                 </div>
               </div>
               <div class="col-6">
                 <div class="stat-item">
                   <h3 class="display-4 fw-bold text-primary mb-0">100%</h3>
-                  <p class="text-muted mb-0">Customer Focus</p>
+                  <p class="text-muted mb-0">{{ translate('about.stats.focus') }}</p>
                 </div>
               </div>
             </div>

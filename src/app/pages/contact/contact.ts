@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
     message: ['', Validators.required]
   });
 
-  translate(key: string): string {
+  translate(key: string): string | string[] {
     return this.languageService.translate(key);
   }
 
@@ -73,11 +73,11 @@ export class ContactComponent implements OnInit {
     }
 
     if (control.errors['required']) {
-      return this.translate(`contact.form.${fieldName}Required`);
+      return this.translate(`contact.form.${fieldName}Required`) as string;
     }
 
     if (fieldName === 'phone' && control.errors['pattern']) {
-      return this.translate('contact.form.phoneInvalid');
+      return this.translate('contact.form.phoneInvalid') as string;
     }
 
     return '';

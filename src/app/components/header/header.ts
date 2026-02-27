@@ -13,7 +13,7 @@ export class HeaderComponent {
 
   readonly language = this.languageService.language;
 
-  translate(key: string): string {
+  translate(key: string): string | string[] {
     return this.languageService.translate(key);
   }
 

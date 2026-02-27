@@ -396,7 +396,7 @@ export class ProductsService {
   }
 
   private getTranslatedName(item: ProductItem): string {
-    const translated = this.languageService.translate(item.nameKey);
+    const translated = this.languageService.translate(item.nameKey) as string;
     // If translation returns the key itself (not found), use the English name as fallback
     return translated === item.nameKey ? item.name : translated;
   }

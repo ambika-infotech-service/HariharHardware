@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  translate(key: string): string {
+  translate(key: string): string | string[] {
     return this.languageService.translate(key);
   }
 

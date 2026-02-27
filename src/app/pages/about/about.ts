@@ -24,8 +24,18 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  translate(key: string): string {
+  translate(key: string): string | string[] {
     return this.languageService.translate(key);
+  }
+
+  get expertiseItems(): string[] {
+    const result = this.languageService.translate('about.expertise.items');
+    return Array.isArray(result) ? result : [];
+  }
+
+  get whyUsReasons(): string[] {
+    const result = this.languageService.translate('about.whyUs.reasons');
+    return Array.isArray(result) ? result : [];
   }
 
   protected readonly features = [
