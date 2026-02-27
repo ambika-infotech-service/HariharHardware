@@ -1,22 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" routerLink="/">
-      <i class="bi bi-tools me-2"></i>
-      Harihar Hardware & Paints
+<nav class="modern-navbar" role="navigation">
+  <div class="navbar-container">
+    <!-- Brand Logo -->
+    <a class="brand-logo" routerLink="/" aria-label="Harihar Hardware & Paints Home">
+      <i class="bi bi-tools brand-icon"></i>
+      <span class="brand-text">Harihar Hardware & Paints</span>
     </a>
 
+    <!-- Mobile Menu Toggle -->
     <button
-      class="navbar-toggler"
+      class="mobile-menu-toggle"
       type="button"
       (click)="toggleMobileMenu()"
+      [class.active]="mobileMenuOpen"
       [attr.aria-expanded]="mobileMenuOpen"
-      aria-label="Toggle navigation"
+      aria-label="Toggle navigation menu"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
     </button>
 
-    <div class="collapse navbar-collapse" [class.show]="mobileMenuOpen">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <!-- Navigation Menu -->
+    <div class="nav-menu" [class.active]="mobileMenuOpen">
+      <ul class="nav-links" role="list">
         <li class="nav-item">
           <a
             class="nav-link"
@@ -25,7 +31,8 @@
             [routerLinkActiveOptions]="{ exact: true }"
             (click)="closeMobileMenu()"
           >
-            {{ translate('nav.home') }}
+            <span class="nav-link-text">{{ translate('nav.home') }}</span>
+            <span class="nav-link-indicator"></span>
           </a>
         </li>
         <li class="nav-item">
@@ -35,7 +42,8 @@
             routerLinkActive="active"
             (click)="closeMobileMenu()"
           >
-            {{ translate('nav.products') }}
+            <span class="nav-link-text">{{ translate('nav.products') }}</span>
+            <span class="nav-link-indicator"></span>
           </a>
         </li>
         <li class="nav-item">
@@ -45,7 +53,8 @@
             routerLinkActive="active"
             (click)="closeMobileMenu()"
           >
-            {{ translate('nav.about') }}
+            <span class="nav-link-text">{{ translate('nav.about') }}</span>
+            <span class="nav-link-indicator"></span>
           </a>
         </li>
         <li class="nav-item">
@@ -55,45 +64,47 @@
             routerLinkActive="active"
             (click)="closeMobileMenu()"
           >
-            {{ translate('nav.contact') }}
+            <span class="nav-link-text">{{ translate('nav.contact') }}</span>
+            <span class="nav-link-indicator"></span>
           </a>
         </li>
       </ul>
 
-      <div class="language-selector ms-lg-3 mt-2 mt-lg-0">
+      <!-- Language Selector -->
+      <div class="language-selector" role="group" aria-label="Language selection">
         <button
           type="button"
-          class="btn btn-sm me-1"
-          [class.btn-primary]="language() === 'en'"
-          [class.btn-outline-light]="language() !== 'en'"
+          class="lang-btn"
+          [class.active]="language() === 'en'"
           (click)="setLanguage('en')"
+          aria-label="Switch to English"
         >
           EN
         </button>
         <button
           type="button"
-          class="btn btn-sm me-1"
-          [class.btn-primary]="language() === 'gu'"
-          [class.btn-outline-light]="language() !== 'gu'"
+          class="lang-btn"
+          [class.active]="language() === 'gu'"
           (click)="setLanguage('gu')"
+          aria-label="ગુજરાતીમાં બદલો"
         >
           ગુ
         </button>
         <button
           type="button"
-          class="btn btn-sm me-1"
-          [class.btn-primary]="language() === 'hi'"
-          [class.btn-outline-light]="language() !== 'hi'"
+          class="lang-btn"
+          [class.active]="language() === 'hi'"
           (click)="setLanguage('hi')"
+          aria-label="हिंदी में बदलें"
         >
           हि
         </button>
         <button
           type="button"
-          class="btn btn-sm"
-          [class.btn-primary]="language() === 'mr'"
-          [class.btn-outline-light]="language() !== 'mr'"
+          class="lang-btn"
+          [class.active]="language() === 'mr'"
           (click)="setLanguage('mr')"
+          aria-label="मराठीत बदला"
         >
           म
         </button>
