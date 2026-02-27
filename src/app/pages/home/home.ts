@@ -30,6 +30,14 @@ export class HomeComponent implements OnInit {
     return this.languageService.translate(key);
   }
 
+  get homeFaqItems() {
+    const result = this.languageService.translate('home.faq.items');
+    if (Array.isArray(result)) {
+      return result;
+    }
+    return [];
+  }
+
   readonly phoneNumber = '+919898659470';
   readonly whatsappNumber = '919898659470';
 

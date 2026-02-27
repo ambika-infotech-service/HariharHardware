@@ -141,6 +141,39 @@
   </div>
 </section>
 
+<!-- FAQ Section -->
+<section class="home-faq py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">{{ translate('home.faq.title') }}</h2>
+          <p class="lead text-muted">{{ translate('home.faq.subtitle') }}</p>
+        </div>
+        <div class="faq-list">
+          @for (item of homeFaqItems; track $index) {
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="bi bi-question-circle-fill text-primary me-3"></i>
+                <h5 class="mb-0">{{ item.question }}</h5>
+              </div>
+              <div class="faq-answer">
+                <p class="text-muted mb-0">{{ item.answer }}</p>
+              </div>
+            </div>
+          }
+        </div>
+        <div class="text-center mt-4">
+          <a routerLink="/faq" class="btn btn-outline-primary">
+            {{ translate('home.faq.viewAll') }}
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Call to Action -->
 <section class="cta py-5">
   <div class="container">

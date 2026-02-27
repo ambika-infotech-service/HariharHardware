@@ -38,6 +38,14 @@ export class AboutComponent implements OnInit {
     return Array.isArray(result) ? result : [];
   }
 
+  get aboutFaqItems() {
+    const result = this.languageService.translate('about.faq.items');
+    if (Array.isArray(result)) {
+      return result;
+    }
+    return [];
+  }
+
   protected readonly features = [
     { icon: 'bi-calendar-check', key: 'experience' },
     { icon: 'bi-award', key: 'quality' },

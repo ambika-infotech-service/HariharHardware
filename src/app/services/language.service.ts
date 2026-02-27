@@ -55,6 +55,29 @@ export class LanguageService {
           callButton: 'Call Now',
           whatsappButton: 'WhatsApp',
           quoteButton: 'Request Quote'
+        },
+        faq: {
+          title: 'Common Questions',
+          subtitle: 'Quick answers to questions you might have',
+          items: [
+            {
+              question: 'Where can I find your store?',
+              answer: 'Our store is located on Gota Road, Ahmedabad, at Gota Cross Road, opposite Ambika Dalvada. Easy to locate for first-time visitors.'
+            },
+            {
+              question: 'What types of products do you offer?',
+              answer: 'We stock a comprehensive range including hardware tools, pipes, pipe fittings, valves, plumbing supplies, paints, power tools, fasteners, and building materials.'
+            },
+            {
+              question: 'When are you open?',
+              answer: 'We are open Monday to Saturday from 8:30 AM to 8:00 PM, and Sundays from 8:30 AM to 12:00 PM.'
+            },
+            {
+              question: 'Which payment methods do you accept?',
+              answer: 'We accept Cash, UPI, BHIM, Paytm, Google Pay, Amazon Pay, and PhonePe for your convenience.'
+            }
+          ],
+          viewAll: 'View All FAQs'
         }
       },
       products: {
@@ -282,6 +305,33 @@ export class LanguageService {
           customers: 'Happy Customers',
           products: 'Product Varieties',
           focus: 'Customer Focus'
+        },
+        faq: {
+          title: 'Frequently Asked Questions',
+          subtitle: 'Learn more about our experience and services',
+          items: [
+            {
+              question: 'How long have you been serving customers?',
+              answer: 'We have been serving customers in Ahmedabad since 2002, bringing over 20 years of experience in the hardware and plumbing supplies industry.'
+            },
+            {
+              question: 'Do you work with contractors and builders?',
+              answer: 'Yes, we regularly work with contractors, plumbers, builders, and electricians. We maintain good stock levels to support both bulk orders and repeat requirements.'
+            },
+            {
+              question: 'Can you help me choose the right materials?',
+              answer: 'Absolutely! Our experienced and knowledgeable staff provides guidance in selecting appropriate hardware and plumbing materials based on your specific project needs.'
+            },
+            {
+              question: 'What types of projects do you serve?',
+              answer: 'We serve a wide range of projects - from small household repairs to large residential, commercial, and industrial construction projects.'
+            },
+            {
+              question: 'What makes you different from other hardware stores?',
+              answer: 'With over 20 years of experience, quality products from trusted brands, knowledgeable staff, competitive pricing, and a convenient Gota Road location, we have established ourselves as a reliable and customer-focused hardware supplier in Ahmedabad.'
+            }
+          ],
+          viewAll: 'View All FAQs'
         }
       },
       faq: {
@@ -435,6 +485,29 @@ export class LanguageService {
           callButton: 'હમણાં કૉલ કરો',
           whatsappButton: 'વોટ્સએપ',
           quoteButton: 'ભાવ માગો'
+        },
+        faq: {
+          title: 'સામાન્ય પ્રશ્નો',
+          subtitle: 'તમારા પ્રશ્નોના ઝડપી જવાબો',
+          items: [
+            {
+              question: 'તમારી દુકાન ક્યાં છે?',
+              answer: 'અમારી દુકાન ગોટા રોડ, અમદાવાદ પર આવેલ છે, ગોટા ક્રોસ રોડ પર, અંબિકા દલવાડા સામે. પ્રથમ વખતના મુલાકાતીઓ માટે સરળતાથી શોધી શકાય છે.'
+            },
+            {
+              question: 'તમે કયા પ્રકારના ઉત્પાદનો ઓફર કરો છો?',
+              answer: 'અમારી પાસે હાર્ડવેર ટૂલ્સ, પાઇપ્સ, પાઇપ ફિટિંગ્સ, વાલ્વ, પ્લમ્બિંગ સપ્લાય, રંગ, પાવર ટૂલ્સ, ફાસ્ટનર્સ અને બિલ્ડિંગ મટીરિયલ્સની વ્યાપક શ્રેણી છે.'
+            },
+            {
+              question: 'તમે ક્યારે ખુલ્લા રહો છો?',
+              answer: 'અમે સોમવારથી શનિવાર સવારે 8:30 થી રાત્રે 8:00 સુધી અને રવિવારે સવારે 8:30 થી બપોરે 12:00 સુધી ખુલ્લા રહીએ છીએ.'
+            },
+            {
+              question: 'તમે કયા પેમેન્ટ પદ્ધતિઓ સ્વીકારો છો?',
+              answer: 'અમે તમારી સગવડ માટે કેશ, UPI, BHIM, Paytm, Google Pay, Amazon Pay અને PhonePe સ્વીકારીએ છીએ.'
+            }
+          ],
+          viewAll: 'બધા પ્રશ્નો જુઓ'
         }
       },
       products: {
@@ -662,6 +735,33 @@ export class LanguageService {
           customers: 'ખુશ ગ્રાહકો',
           products: 'ઉત્પાદન વિવિધતાઓ',
           focus: 'ગ્રાહક ફોકસ'
+        },
+        faq: {
+          title: 'વારંવાર પૂછાતા પ્રશ્નો',
+          subtitle: 'અમારા અનુભવ અને સેવાઓ વિશે વધુ જાણો',
+          items: [
+            {
+              question: 'તમે કેટલા સમયથી ગ્રાહકોની સેવા કરી રહ્યા છો?',
+              answer: 'અમે 2002 થી અમદાવાદમાં ગ્રાહકોની સેવા કરી રહ્યા છીએ, હાર્ડવેર અને પ્લમ્બિંગ સપ્લાય ઉદ્યોગમાં 20 વર્ષથી વધુનો અનુભવ લાવીએ છીએ.'
+            },
+            {
+              question: 'શું તમે કોન્ટ્રાક્ટરો અને બિલ્ડરો સાથે કામ કરો છો?',
+              answer: 'હા, અમે નિયમિતપણે કોન્ટ્રાક્ટરો, પ્લમ્બરો, બિલ્ડરો અને ઇલેક્ટ્રિશિયન સાથે કામ કરીએ છીએ. બલ્ક ઓર્ડર અને પુનરાવર્તિત જરૂરિયાતોને સમર્થન આપવા માટે અમે સારા સ્ટોક સ્તરો જાળવી રાખીએ છીએ.'
+            },
+            {
+              question: 'શું તમે મને યોગ્ય સામગ્રી પસંદ કરવામાં મદદ કરી શકો છો?',
+              answer: 'બિલકુલ! અમારો અનુભવી અને જાણકાર સ્ટાફ તમારી વિશિષ્ટ પ્રોજેક્ટ જરૂરિયાતોના આધારે યોગ્ય હાર્ડવેર અને પ્લમ્બિંગ સામગ્રી પસંદ કરવા માટે માર્ગદર્શન પૂરું પાડે છે.'
+            },
+            {
+              question: 'તમે કયા પ્રકારના પ્રોજેક્ટ્સ માટે સેવા આપો છો?',
+              answer: 'અમે વિસ્તૃત શ્રેણીના પ્રોજેક્ટ્સ માટે સેવા આપીએ છીએ - નાના ઘરેલું સમારકામથી લઈને મોટા રહેણાંક, વ્યાવસાયિક અને ઔદ્યોગિક બાંધકામ પ્રોજેક્ટ્સ સુધી.'
+            },
+            {
+              question: 'અન્ય હાર્ડવેર સ્ટોર્સથી તમે શું અલગ છો?',
+              answer: '20 વર્ષથી વધુના અનુભવ, વિશ્વસનીય બ્રાન્ડ્સમાંથી ગુણવત્તાયુક્ત ઉત્પાદનો, જાણકાર સ્ટાફ, સ્પર્ધાત્મક કિંમતો અને સુવિધાજનક ગોતા રોડ સ્થાન સાથે, અમે અમદાવાદમાં વિશ્વસનીય અને ગ્રાહક-કેન્દ્રિત હાર્ડવેર સપ્લાયર તરીકે પોતાને સ્થાપિત કર્યું છે.'
+            }
+          ],
+          viewAll: 'બધા પ્રશ્નો જુઓ'
         }
       },
       faq: {
@@ -815,6 +915,29 @@ export class LanguageService {
           callButton: 'अभी कॉल करें',
           whatsappButton: 'व्हाट्सएप',
           quoteButton: 'भाव मांगें'
+        },
+        faq: {
+          title: 'सामान्य प्रश्न',
+          subtitle: 'आपके सवालों के त्वरित जवाब',
+          items: [
+            {
+              question: 'आपकी दुकान कहाँ है?',
+              answer: 'हमारी दुकान गोटा रोड, अहमदाबाद पर स्थित है, गोटा क्रॉस रोड पर, अंबिका दलवाड़ा के सामने। पहली बार आने वालों के लिए आसानी से मिल जाएगी।'
+            },
+            {
+              question: 'आप किस प्रकार के उत्पाद प्रदान करते हैं?',
+              answer: 'हमारे पास हार्डवेयर टूल्स, पाइप, पाइप फिटिंग, वाल्व, प्लंबिंग सप्लाई, पेंट, पावर टूल्स, फास्टनर और बिल्डिंग मटेरियल की व्यापक रेंज है।'
+            },
+            {
+              question: 'आप कब खुले रहते हैं?',
+              answer: 'हम सोमवार से शनिवार सुबह 8:30 से रात 8:00 बजे तक और रविवार को सुबह 8:30 से दोपहर 12:00 बजे तक खुले रहते हैं।'
+            },
+            {
+              question: 'आप कौन से भुगतान तरीके स्वीकार करते हैं?',
+              answer: 'हम आपकी सुविधा के लिए कैश, UPI, BHIM, Paytm, Google Pay, Amazon Pay और PhonePe स्वीकार करते हैं।'
+            }
+          ],
+          viewAll: 'सभी प्रश्न देखें'
         }
       },
       products: {
@@ -1042,6 +1165,33 @@ export class LanguageService {
           customers: 'खुश ग्राहक',
           products: 'उत्पाद किस्में',
           focus: 'ग्राहक फोकस'
+        },
+        faq: {
+          title: 'अक्सर पूछे जाने वाले प्रश्न',
+          subtitle: 'हमारे अनुभव और सेवाओं के बारे में और जानें',
+          items: [
+            {
+              question: 'आप कितने समय से ग्राहकों की सेवा कर रहे हैं?',
+              answer: 'हम 2002 से अहमदाबाद में ग्राहकों की सेवा कर रहे हैं, हार्डवेयर और प्लंबिंग सप्लाई उद्योग में 20 वर्षों से अधिक का अनुभव लाते हैं।'
+            },
+            {
+              question: 'क्या आप ठेकेदारों और बिल्डरों के साथ काम करते हैं?',
+              answer: 'हां, हम नियमित रूप से ठेकेदारों, प्लंबरों, बिल्डरों और इलेक्ट्रीशियन के साथ काम करते हैं। हम बड़े ऑर्डर और बार-बार की आवश्यकताओं का समर्थन करने के लिए अच्छे स्टॉक स्तर बनाए रखते हैं।'
+            },
+            {
+              question: 'क्या आप मुझे सही सामग्री चुनने में मदद कर सकते हैं?',
+              answer: 'बिल्कुल! हमारे अनुभवी और जानकार कर्मचारी आपकी विशिष्ट परियोजना आवश्यकताओं के आधार पर उपयुक्त हार्डवेयर और प्लंबिंग सामग्री चुनने में मार्गदर्शन प्रदान करते हैं।'
+            },
+            {
+              question: 'आप किस प्रकार की परियोजनाओं की सेवा करते हैं?',
+              answer: 'हम परियोजनाओं की एक विस्तृत श्रृंखला की सेवा करते हैं - छोटी घरेलू मरम्मत से लेकर बड़ी आवासीय, वाणिज्यिक और औद्योगिक निर्माण परियोजनाओं तक।'
+            },
+            {
+              question: 'अन्य हार्डवेयर स्टोर से आप क्या अलग हैं?',
+              answer: '20 वर्षों से अधिक के अनुभव, विश्वसनीय ब्रांडों से गुणवत्ता उत्पाद, जानकार कर्मचारी, प्रतिस्पर्धी मूल्य निर्धारण और सुविधाजनक गोता रोड स्थान के साथ, हमने अहमदाबाद में एक विश्वसनीय और ग्राहक-केंद्रित हार्डवेयर आपूर्तिकर्ता के रूप में खुद को स्थापित किया है।'
+            }
+          ],
+          viewAll: 'सभी प्रश्न देखें'
         }
       },
       faq: {
@@ -1195,6 +1345,29 @@ export class LanguageService {
           callButton: 'आत्ताच कॉल करा',
           whatsappButton: 'व्हॉट्सअॅप',
           quoteButton: 'भाव मागा'
+        },
+        faq: {
+          title: 'सामान्य प्रश्न',
+          subtitle: 'तुमच्या प्रश्नांची जलद उत्तरे',
+          items: [
+            {
+              question: 'तुमचं दुकान कोठे आहे?',
+              answer: 'आमचं दुकान गोटा रोड, अहमदाबाद येथे आहे, गोटा क्रॉस रोड वर, अंबिका दलवाडा समोर. पहिल्यांदा येणार्‍यांसाठी सहज शोधता येईल.'
+            },
+            {
+              question: 'तुम्ही कोणत्या प्रकारची उत्पादने देता?',
+              answer: 'आमच्याकडे हार्डवेअर टूल्स, पाईप्स, पाईप फिटिंग्ज, वाल्व्ह, प्लंबिंग पुरवठा, पेंट, पॉवर टूल्स, फास्टनर्स आणि बांधकाम साहित्याची व्यापक श्रेणी आहे.'
+            },
+            {
+              question: 'तुम्ही केव्हा उघडे असता?',
+              answer: 'आम्ही सोमवार ते शनिवार सकाळी 8:30 ते रात्री 8:00 आणि रविवारी सकाळी 8:30 ते दुपारी 12:00 पर्यंत उघडे असतो.'
+            },
+            {
+              question: 'तुम्ही कोणत्या पेमेंट पद्धती स्वीकारता?',
+              answer: 'आम्ही तुमच्या सोयीसाठी कॅश, UPI, BHIM, Paytm, Google Pay, Amazon Pay आणि PhonePe स्वीकारतो.'
+            }
+          ],
+          viewAll: 'सर्व प्रश्न पहा'
         }
       },
       products: {
@@ -1422,6 +1595,33 @@ export class LanguageService {
           customers: 'आनंदी ग्राहक',
           products: 'उत्पादन प्रकार',
           focus: 'ग्राहक फोकस'
+        },
+        faq: {
+          title: 'वारंवार विचारले जाणारे प्रश्न',
+          subtitle: 'आमच्या अनुभवाबद्दल आणि सेवांबद्दल अधिक जाणून घ्या',
+          items: [
+            {
+              question: 'तुम्ही किती काळापासून ग्राहकांना सेवा देत आहात?',
+              answer: 'आम्ही 2002 पासून अहमदाबादमध्ये ग्राहकांना सेवा देत आहोत, हार्डवेअर आणि प्लंबिंग पुरवठा उद्योगात 20 वर्षांहून अधिक अनुभव आणत आहोत.'
+            },
+            {
+              question: 'तुम्ही कंत्राटदार आणि बांधकाम व्यावसायिकांसोबत काम करता का?',
+              answer: 'होय, आम्ही नियमितपणे कंत्राटदार, प्लंबर, बांधकाम व्यावसायिक आणि इलेक्ट्रीशियनसोबत काम करतो. मोठ्या प्रमाणावरील ऑर्डर आणि वारंवार येणार्‍या गरजा पूर्ण करण्यासाठी आम्ही चांगले स्टॉक स्तर राखतो.'
+            },
+            {
+              question: 'तुम्ही मला योग्य साहित्य निवडण्यात मदत करू शकता का?',
+              answer: 'नक्कीच! आमचे अनुभवी आणि जाणकार कर्मचारी तुमच्या विशिष्ट प्रकल्प गरजांवर आधारित योग्य हार्डवेअर आणि प्लंबिंग साहित्य निवडण्यात मार्गदर्शन देतात.'
+            },
+            {
+              question: 'तुम्ही कोणत्या प्रकारच्या प्रकल्पांसाठी सेवा देता?',
+              answer: 'आम्ही प्रकल्पांच्या विस्तृत श्रेणीसाठी सेवा देतो - लहान घरगुती दुरुस्तीपासून ते मोठ्या निवासी, व्यावसायिक आणि औद्योगिक बांधकाम प्रकल्पांपर्यंत.'
+            },
+            {
+              question: 'इतर हार्डवेअर स्टोअरपेक्षा तुम्ही काय वेगळे आहात?',
+              answer: '20 वर्षांहून अधिक अनुभव, विश्वासार्ह ब्रँड्सकडून दर्जेदार उत्पादने, जाणकार कर्मचारी, स्पर्धात्मक किंमत आणि सोयीचे गोता रोड स्थान यांसह, आम्ही अहमदाबादमध्ये विश्वासार्ह आणि ग्राहक-केंद्रित हार्डवेअर पुरवठादार म्हणून स्थापित केले आहे.'
+            }
+          ],
+          viewAll: 'सर्व प्रश्न पहा'
         }
       },
       faq: {

@@ -160,3 +160,33 @@
     </div>
   </div>
 </section>
+
+<!-- FAQ Section -->
+<section class="about-faq py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold mb-3">{{ translate('about.faq.title') }}</h2>
+          <p class="lead text-muted">{{ translate('about.faq.subtitle') }}</p>
+        </div>
+        <div class="faq-list">
+          @for (item of aboutFaqItems; track $index) {
+            <div class="faq-item">
+              <div class="faq-question">
+                <i class="bi bi-question-circle-fill text-primary me-3"></i>
+                <h5 class="mb-0">{{ item.question }}</h5>
+              </div>
+              <div class="faq-answer">
+                <p class="mb-0">{{ item.answer }}</p>
+              </div>
+            </div>
+          }
+        </div>
+        <div class="text-center mt-5">
+          <a routerLink="/faq" class="btn btn-primary btn-lg">{{ translate('about.faq.viewAll') }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
