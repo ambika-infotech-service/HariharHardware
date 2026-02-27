@@ -4,6 +4,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
 import { JsonLdService } from '../../services/jsonld.service';
+import { WhatsappService } from '../../services/whatsapp.service';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +18,7 @@ export class ContactComponent implements OnInit {
   private sanitizer = inject(DomSanitizer);
   private seo = inject(SeoService);
   private jsonLd = inject(JsonLdService);
+  private whatsappService = inject(WhatsappService);
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
@@ -94,7 +96,7 @@ export class ContactComponent implements OnInit {
   }
 
   readonly phoneNumber = '+919898659470';
-  readonly whatsappNumber = '919898659470';
+  protected readonly whatsappUrl = this.whatsappService.getDefaultWhatsappUrl();
   readonly email = 'hariharhardwareandpaints@gmail.com';
   readonly googleBusinessUrl = 'https://share.google/g2uXPImPeFOepBdNM';
   readonly googleMapsUrl = 'https://www.google.com/maps?s=web&lqi=ChBoYXJpaGFyIGhhcmR3YXJlSMW4xt3nlYCACFoaEAAQARgAGAEiEGhhcmloYXIgaGFyZHdhcmWSAQ5oYXJkd2FyZV9zdG9yZQ&phdesc=iNc8oIQAxOg&vet=12ahUKEwiu4tz-z86SAxVVRTABHV8ABVYQ1YkKegQIJhAB..i&cs=0&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KRmS66kog145Me_oU0YdAiqr&daddr=Krishna+Complex,+Opposite+Ambika+Dalwada,+Gota+Highway+Chowkdi,+Chandlodiya+Rd,+Gota,+Ahmedabad,+Gujarat+382481';

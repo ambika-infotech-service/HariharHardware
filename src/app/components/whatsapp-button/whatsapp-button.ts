@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { WhatsappService } from '../../services/whatsapp.service';
 
 @Component({
   selector: 'app-whatsapp-button',
@@ -8,5 +9,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class WhatsappButton {
-  protected readonly whatsappUrl = `https://wa.me/919898659470?text=${encodeURIComponent('Hi! I would like to get a quote for your hardware products.')}`;
+  private whatsappService = inject(WhatsappService);
+  protected readonly whatsappUrl = this.whatsappService.getDefaultWhatsappUrl();
 }

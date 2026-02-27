@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
 import { JsonLdService } from '../../services/jsonld.service';
+import { WhatsappService } from '../../services/whatsapp.service';
 
 interface FaqItem {
   question: string;
@@ -18,6 +19,9 @@ export class FaqComponent implements OnInit {
   private languageService = inject(LanguageService);
   private seo = inject(SeoService);
   private jsonLd = inject(JsonLdService);
+  private whatsappService = inject(WhatsappService);
+
+  protected readonly whatsappUrl = this.whatsappService.getDefaultWhatsappUrl();
 
   ngOnInit(): void {
     this.seo.updateMetaTags({

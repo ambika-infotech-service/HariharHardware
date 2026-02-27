@@ -47,11 +47,11 @@
         <h2 class="fw-bold mb-3">{{ translate('faq.cta.title') }}</h2>
         <p class="lead text-muted mb-4">{{ translate('faq.cta.description') }}</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
-          <a href="tel:+919879406839" class="btn btn-primary btn-lg">
+          <a href="tel:+919898659470" class="btn btn-primary btn-lg">
             <i class="bi bi-telephone-fill me-2"></i>
             {{ translate('home.cta.callButton') }}
           </a>
-          <a href="https://wa.me/919879406839" target="_blank" class="btn btn-success btn-lg">
+          <a [href]="whatsappUrl" target="_blank" class="btn btn-success btn-lg">
             <i class="bi bi-whatsapp me-2"></i>
             {{ translate('home.cta.whatsappButton') }}
           </a>

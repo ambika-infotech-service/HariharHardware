@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
 import { JsonLdService } from '../../services/jsonld.service';
+import { WhatsappService } from '../../services/whatsapp.service';
 import { InViewDirective } from '../../directives/in-view.directive';
 
 @Component({
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
   private languageService = inject(LanguageService);
   private seo = inject(SeoService);
   private jsonLd = inject(JsonLdService);
+  private whatsappService = inject(WhatsappService);
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
@@ -48,7 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   readonly phoneNumber = '+919898659470';
-  readonly whatsappNumber = '919898659470';
+  protected readonly whatsappUrl = this.whatsappService.getDefaultWhatsappUrl();
 
   protected readonly categories = [
     { icon: 'bi-pip', key: 'pipes' },
