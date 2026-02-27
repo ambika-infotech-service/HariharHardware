@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, OnInit, signal, ChangeDetectionStrategy, effect } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
@@ -17,7 +17,15 @@ export class ProductsComponent implements OnInit {
   private seo = inject(SeoService);
   private productsService = inject(ProductsService);
 
-  protected productSections = signal<ProductSection[]>([]);
+  protected productSections = signal<any[]>([]);
+
+  constructor() {
+    // Update product sections whenever language changes
+    effect(() => {
+      this.languageService.language();
+      this.productSections.set(this.productsService.getProductSections());
+    });
+  }
 
   ngOnInit(): void {
     this.seo.updateMetaTags({

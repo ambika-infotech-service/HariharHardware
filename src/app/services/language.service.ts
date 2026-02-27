@@ -3,7 +3,7 @@ import { Injectable, signal } from '@angular/core';
 export type Language = 'en' | 'gu' | 'hi' | 'mr';
 
 export interface Translation {
-  [key: string]: string | Translation;
+  [key: string]: string | string[] | Translation;
 }
 
 @Injectable({
@@ -59,33 +59,151 @@ export class LanguageService {
       products: {
         title: 'Products & Services',
         subtitle: 'Comprehensive range of hardware and plumbing supplies',
-        categories: {
-          pipes: {
-            title: 'Pipes & Tubes',
-            items: 'GI pipes, MS pipes, PVC pipes, CPVC pipes, HDPE pipes, Drainage pipes'
-          },
-          fittings: {
-            title: 'Pipe Fittings',
-            items: 'Elbows, Tees, Reducers, Couplings, Unions, Nipples, Caps, Plugs'
-          },
-          valves: {
-            title: 'Valves & Controls',
-            items: 'Gate valves, Globe valves, Ball valves, Check valves, Butterfly valves'
-          },
-          flanges: {
-            title: 'Flanges',
-            items: 'Slip-on flanges, Weld neck flanges, Blind flanges, Threaded flanges'
-          },
-          accessories: {
-            title: 'Hardware & Accessories',
-            items: 'Fasteners, Clamps, Brackets, Gaskets, Sealing materials'
+        highlights: {
+          sizes: 'Available in multiple sizes & brands',
+          orders: 'Bulk & retail orders accepted',
+          pricing: 'Call / WhatsApp for price'
+        },
+        sections: {
+          hardware: {
+            title: '🔧 Hardware Products',
+            fasteners: {
+              title: 'Fasteners',
+              items: ['Nails', 'Screws', 'Nuts & Bolts', 'Washers', 'Anchor Fasteners']
+            },
+            handTools: {
+              title: 'Hand Tools',
+              items: ['Hammers', 'Screwdrivers', 'Pliers', 'Spanners & Wrenches', 'Measuring Tools', 'Chisels & Cutters']
+            },
+            powerTools: {
+              title: 'Power Tools',
+              items: ['Drill Machines', 'Grinders', 'Cutting Machines', 'Heat Guns', 'Electric Screwdrivers']
+            },
+            doorFittings: {
+              title: 'Door & Furniture Fittings',
+              items: ['Hinges', 'Door Handles & Knobs', 'Tower Bolts', 'Door Stoppers', 'Locks & Padlocks']
+            },
+            safety: {
+              title: 'Safety & Utility Items',
+              items: ['Safety Gloves', 'Safety Goggles', 'Helmets', 'Ladders']
+            }
           },
           plumbing: {
-            title: 'Plumbing Supplies',
-            items: 'Taps, Showers, Bathroom fittings, Kitchen fittings, Water tanks'
+            title: '🚰 Plumbing & Pipe Fittings',
+            pipes: {
+              title: 'Pipes',
+              items: ['PVC Pipes', 'CPVC Pipes', 'UPVC Pipes', 'GI Pipes', 'HDPE Pipes', 'PPR Pipes']
+            },
+            pipeFittings: {
+              title: 'Pipe Fittings',
+              items: ['Elbows', 'Tees', 'Couplers', 'Reducers', 'Unions', 'End Caps', 'Flanges']
+            },
+            valvesTaps: {
+              title: 'Valves & Taps',
+              items: ['Ball Valves', 'Gate Valves', 'Angle Valves', 'Bib Cocks', 'Pillar Cocks', 'Mixer Taps']
+            },
+            bathroomKitchen: {
+              title: 'Bathroom & Kitchen Accessories',
+              items: ['Shower Heads', 'Flexible Hoses', 'Sink Couplings', 'Bottle Traps', 'Floor Traps']
+            },
+            plumbingTools: {
+              title: 'Plumbing Tools & Consumables',
+              items: ['Pipe Wrenches', 'Pipe Cutters', 'Teflon Tape', 'Solvent Cement', 'Rubber Gaskets', 'Pipe Clamps']
+            }
+          },
+          paints: {
+            title: '🎨 Paints & Painting Solutions',
+            wallPaints: {
+              title: 'Wall Paints',
+              items: ['Interior Wall Paints', 'Exterior Wall Paints', 'Emulsion Paints', 'Distemper']
+            },
+            industrialPaints: {
+              title: 'Industrial & Metal Paints',
+              items: ['Enamel Paints', 'Anti-Rust Paints', 'Heat-Resistant Paints']
+            },
+            surfacePrep: {
+              title: 'Surface Preparation',
+              items: ['Primers', 'Wall Putty', 'Waterproofing Coatings']
+            },
+            paintFinishes: {
+              title: 'Paint Finishes',
+              items: ['Matte Finish', 'Gloss Finish', 'Satin Finish', 'Texture Paints']
+            },
+            paintingTools: {
+              title: 'Painting Tools',
+              items: ['Paint Brushes', 'Rollers', 'Roller Trays', 'Scrapers', 'Sandpaper']
+            },
+            thinnersChemicals: {
+              title: 'Thinners & Chemicals',
+              items: ['Paint Thinner', 'Turpentine Oil', 'Paint Removers']
+            },
+            woodPolish: {
+              title: 'Wood Polish & Varnish',
+              items: ['Polish', 'Varnish', 'Stain']
+            }
+          },
+          construction: {
+            title: '🧱 Construction Materials',
+            cement: {
+              title: 'Cement',
+              items: ['Ordinary Portland Cement', 'White Cement']
+            },
+            tileMaterials: {
+              title: 'Tile Materials',
+              items: ['Tile Adhesives', 'Tile Grout']
+            },
+            gypsum: {
+              title: 'Gypsum Products',
+              items: ['Gypsum Boards', 'Joint Compound']
+            },
+            waterproofing: {
+              title: 'Waterproofing Chemicals',
+              items: ['Liquid Waterproofing', 'Waterproofing Sheets', 'Sealants']
+            }
+          },
+          electrical: {
+            title: '💡 Electrical Products',
+            switches: {
+              title: 'Switches & Accessories',
+              items: ['Switches', 'Sockets', 'Switch Boards']
+            },
+            lighting: {
+              title: 'Lighting',
+              items: ['LED Bulbs', 'Tube Lights', 'Fixtures']
+            },
+            wiring: {
+              title: 'Wiring & Safety',
+              items: ['Wires & Cables', 'MCBs', 'Fuse Units', 'Extension Boards']
+            }
+          },
+          adhesives: {
+            title: '🧰 Adhesives, Sealants & Miscellaneous',
+            adhesivesGlues: {
+              title: 'Adhesives & Glues',
+              items: ['Wood Adhesive', 'Construction Adhesive', 'Instant Adhesive']
+            },
+            sealants: {
+              title: 'Silicone Sealants',
+              items: ['Clear Sealant', 'Colored Sealant', 'Acoustic Sealant']
+            },
+            tapes: {
+              title: 'Insulation & Tape',
+              items: ['Insulation Tape', 'Duct Tape', 'Electrical Tape']
+            },
+            misc: {
+              title: 'Miscellaneous',
+              items: ['Lubricants', 'Cleaning Brushes', 'Buckets', 'Rope & Net', 'Tarpaulin Sheets']
+            }
           }
         },
-        contact: 'For specific brands, sizes, or bulk orders, please contact us directly.'
+        contactInfo: {
+          title: 'Need More Information?',
+          description: 'For specific product details, availability, pricing, and bulk orders:',
+          call: 'Call Us:',
+          whatsapp: 'WhatsApp:',
+          email: 'Email:',
+          sendInquiry: 'Send Inquiry'
+        }
       },
       about: {
         title: 'About Harihar Hardware',
@@ -212,33 +330,151 @@ export class LanguageService {
       products: {
         title: 'ઉત્પાદનો અને સેવાઓ',
         subtitle: 'હાર્ડવેર અને પ્લમ્બિંગ સપ્લાયની વ્યાપક શ્રેણી',
-        categories: {
-          pipes: {
-            title: 'પાઇપ્સ અને ટ્યુબ્સ',
-            items: 'જીઆઇ પાઇપ, એમએસ પાઇપ, પીવીસી પાઇપ, સીપીવીસી પાઇપ, એચડીપીઇ પાઇપ, ડ્રેનેજ પાઇપ'
-          },
-          fittings: {
-            title: 'પાઇપ ફિટિંગ્સ',
-            items: 'એલ્બો, ટી, રિડ્યુસર, કપલિંગ, યુનિયન, નિપલ, કેપ, પ્લગ'
-          },
-          valves: {
-            title: 'વાલ્વ અને કંટ્રોલ્સ',
-            items: 'ગેટ વાલ્વ, ગ્લોબ વાલ્વ, બોલ વાલ્વ, ચેક વાલ્વ, બટરફ્લાય વાલ્વ'
-          },
-          flanges: {
-            title: 'ફ્લેંજિસ',
-            items: 'સ્લિપ-ઓન ફ્લેંજ, વેલ્ડ નેક ફ્લેંજ, બ્લાઇન્ડ ફ્લેંજ, થ્રેડેડ ફ્લેંજ'
-          },
-          accessories: {
-            title: 'હાર્ડવેર અને એક્સેસરીઝ',
-            items: 'ફાસ્ટનર્સ, ક્લેમ્પ્સ, બ્રેકેટ્સ, ગાસ્કેટ્સ, સીલિંગ સામગ્રી'
+        highlights: {
+          sizes: 'બહુવિધ માપ અને બ્રાન્ડમાં ઉપલબ્ધ',
+          orders: 'બલ્ક અને રિટેઇલ ઓર્ડર સ્વીકારવામાં આવે છે',
+          pricing: 'કિંમત માટે કૉલ / વોટ્સએપ કરો'
+        },
+        sections: {
+          hardware: {
+            title: '🔧 હાર્ડવેર ઉત્પાદનો',
+            fasteners: {
+              title: 'ફાસ્ટનર્સ',
+              items: ['નખ', 'સ્ક્રૂ', 'નટ અને બોલ્ટ', 'વોશર', 'એન્કર ફાસ્ટનર્સ']
+            },
+            handTools: {
+              title: 'હાથના સાધનો',
+              items: ['હથોડીઓ', 'સ્ક્રુડ્રાઇવર્સ', 'પ્લાયર્સ', 'સ્પેનર્સ અને રેંચ', 'માપનાં સાધનો', 'છેણી અને કટર']
+            },
+            powerTools: {
+              title: 'પાવર સાધનો',
+              items: ['ડ્રિલ મશીનો', 'ગ્રાઇન્ડર્સ', 'કટીંગ મશીનો', 'હીટ ગનો', 'ઈલેક્ટ્રિક સ્ક્રુડ્રાઇવર્સ']
+            },
+            doorFittings: {
+              title: 'દરવાજા અને ફર્નિચર ફિટિંગ્સ',
+              items: ['કીલ', 'દરવાજાના હેન્ડલ્સ અને નોબ્સ', 'ટાવર બોલ્ટ્સ', 'દરવાજાના સ્ટોપર', 'તાળા અને તાલીઓ']
+            },
+            safety: {
+              title: 'સુરક્ષા અને ઉપયોગી ચીજવસ્તુ',
+              items: ['સુરક્ષા દસ્તાનાઓ', 'સુરક્ષા ચશ્માઓ', 'હેલમેટ્સ', 'સીડીઓ']
+            }
           },
           plumbing: {
-            title: 'પ્લમ્બિંગ સપ્લાય',
-            items: 'નળ, શાવર, બાથરૂમ ફિટિંગ્સ, કિચન ફિટિંગ્સ, પાણીની ટાંકી'
+            title: '🚰 પ્લમ્બિંગ અને પાઇપ ફિટિંગ્સ',
+            pipes: {
+              title: 'પાઇપ્સ',
+              items: ['પીવીસી પાઇપ્સ', 'સીપીવીસી પાઇપ્સ', 'યુપીવીસી પાઇપ્સ', 'જીઆઇ પાઇપ્સ', 'એચડીપીઇ પાઇપ્સ', 'પીપીઆર પાઇપ્સ']
+            },
+            pipeFittings: {
+              title: 'પાઇપ ફિટિંગ્સ',
+              items: ['એલ્બો', 'ટી', 'કપલર્સ', 'રીડ્યુસર્સ', 'યુનિયન', 'એન્ડ કેપ્સ', 'ફ્લેંજ']
+            },
+            valvesTaps: {
+              title: 'વાલ્વ અને નણ',
+              items: ['બોલ વાલ્વ', 'ગેટ વાલ્વ', 'એંગલ વાલ્વ', 'બીબ કોક્સ', 'પિલર કોક્સ', 'મિક્સર ટેપ્સ']
+            },
+            bathroomKitchen: {
+              title: 'બાથરૂમ અને રસોડું એક્સેસરીઝ',
+              items: ['શાવર હેડ્સ', 'લવચક હોજ', 'સિંક કપલિંગ', 'બોટલ ટ્રેપ્સ', 'ફ્લોર ટ્રેપ્સ']
+            },
+            plumbingTools: {
+              title: 'પ્લમ્બિંગ સાધનો અને ઉપભોગ્યવસ્તુ',
+              items: ['પાઇપ રેંચ', 'પાઇપ કટર', 'ટેફલોન ટેપ', 'સોલવેન્ટ સિમેન્ટ', 'રબર ગેસ્કેટ', 'પાઇપ ક્લેમ્પ્સ']
+            }
+          },
+          paints: {
+            title: '🎨 પેઇન્ટ્સ અને પેઇન્ટિંગ સોલ્યુશન્સ',
+            wallPaints: {
+              title: 'દીવાલ પેઇન્ટ્સ',
+              items: ['આંતરિક દીવાલ પેઇન્ટ્સ', 'બાહ્ય દીવાલ પેઇન્ટ્સ', 'ઇમલશન પેઇન્ટ્સ', 'ડિસટેમ્પર']
+            },
+            industrialPaints: {
+              title: 'ઉદ્યોગીય અને ધાતુ પેઇન્ટ્સ',
+              items: ['ઈનામેલ પેઇન્ટ્સ', 'એન્ટી-રસ્ટ પેઈન્ટ્સ', 'હીટ-રેજિસ્ટન્ટ પેઈન્ટ્સ']
+            },
+            surfacePrep: {
+              title: 'સપાટીની તૈયારી',
+              items: ['પ્રાઇમર્સ', 'દીવાલ પુટ્ટી', 'વાટરપ્રુફિંગ કોટિંગ્સ']
+            },
+            paintFinishes: {
+              title: 'પેઇન્ટ ફિનિશ્સ',
+              items: ['મેટ ફિનિશ', 'ગ્લોસ ફિનિશ', 'સાટીન ફિનિશ', 'ટેક્સચર પેઈન્ટ્સ']
+            },
+            paintingTools: {
+              title: 'પેઇન્ટિંગ સાધનો',
+              items: ['પેઇન્ટ બ્રશ', 'રોલર્સ', 'રોલર ટ્રે', 'સ્ક્રેપર્સ', 'સેન્ડપેપર']
+            },
+            thinnersChemicals: {
+              title: 'થિનર્સ અને રસાયણો',
+              items: ['પેઇન્ટ થિનર', 'ટર્પેન્ટાઇન ઓઇલ', 'પેઇન્ટ રીમૂવર્સ']
+            },
+            woodPolish: {
+              title: 'કાઠ પોલિશ અને વર્નિશ',
+              items: ['પોલિશ', 'વર્નિશ', 'સ્ટેઇન']
+            }
+          },
+          construction: {
+            title: '🧱 બાંધકામ સામગ્રી',
+            cement: {
+              title: 'સિમેન્ટ',
+              items: ['સામાન્ય પોર્ટલેન્ડ સિમેન્ટ', 'સફેદ સિમેન્ટ']
+            },
+            tileMaterials: {
+              title: 'ટાઇલ સામગ્રી',
+              items: ['ટાઇલ ગ્લુ', 'ટાઇલ ગ્રાઉટ']
+            },
+            gypsum: {
+              title: 'જીપ્સમ ઉત્પાદનો',
+              items: ['જીપ્સમ બોર્ડ્સ', 'જોઇન્ટ કમ્પાઉન્ડ']
+            },
+            waterproofing: {
+              title: 'વાટરપ્રુફિંગ રસાયણો',
+              items: ['લિક્વિડ વાટરપ્રુફિંગ', 'વાટરપ્રુફિંગ શીટ્સ', 'સીલેન્ટ્સ']
+            }
+          },
+          electrical: {
+            title: '💡 ઈલેક્ટ્રિકલ ઉત્પાદનો',
+            switches: {
+              title: 'સ્વિચ અને એક્સેસરીઝ',
+              items: ['સ્વિચ', 'સોકેટ', 'સ્વિચ બોર્ડ્સ']
+            },
+            lighting: {
+              title: 'લાઇટિંગ',
+              items: ['એલઈડી બલ્બ્સ', 'ટ્યુબ લાઇટ્સ', 'ફિક્સચર્સ']
+            },
+            wiring: {
+              title: 'વાયરિંગ અને સુરક્ષા',
+              items: ['વાયર અને કેબલ્સ', 'એમસીબી', 'ફ્યુઝ યુનિટ્સ', 'એક્સટેન્શન બોર્ડ્સ']
+            }
+          },
+          adhesives: {
+            title: '🧰 એધેસીવ્સ, સીલેન્ટ્સ અને વિવિધ',
+            adhesivesGlues: {
+              title: 'એધેસીવ્સ અને ગ્લુ',
+              items: ['કાઠ એધેસીવ', 'બાંધકામ એધેસીવ', 'તાત્કાલિક એધેસીવ']
+            },
+            sealants: {
+              title: 'સિલિકોન સીલેન્ટ્સ',
+              items: ['સ્પષ્ટ સીલેન્ટ', 'રંગીન સીલેન્ટ', 'એકોસ્ટિક સીલેન્ટ']
+            },
+            tapes: {
+              title: 'ઇન્સુલેશન અને ટેપ',
+              items: ['ઇન્સુલેશન ટેપ', 'ડક્ટ ટેપ', 'ઈલેક્ટ્રિકલ ટેપ']
+            },
+            misc: {
+              title: 'વિવિધ',
+              items: ['લુબ્રિકેન્ટ્સ', 'ક્લીનિંગ બ્રશ', 'બાલ્ટી', 'દોરી અને જાળી', 'તારપોલિન શીટ્સ']
+            }
           }
         },
-        contact: 'વિશિષ્ટ બ્રાન્ડ્સ, માપ અથવા બલ્ક ઓર્ડર માટે, કૃપા કરીને સીધા અમારો સંપર્ક કરો.'
+        contactInfo: {
+          title: 'વધુ માહિતી જોઈએ છે?',
+          description: 'ચોક્કસ ઉત્પાદન વિવરણ, ઉપલબ્ધતા, કિંમત અને બલ્ક ઓર્ડર માટે:',
+          call: 'અમને કૉલ કરો:',
+          whatsapp: 'વોટ્સએપ:',
+          email: 'ઇમેઇલ:',
+          sendInquiry: 'પૂછપરછ મોકલો'
+        }
       },
       about: {
         title: 'હરિહર હાર્ડવેર વિશે',
@@ -365,33 +601,151 @@ export class LanguageService {
       products: {
         title: 'उत्पाद और सेवाएं',
         subtitle: 'हार्डवेयर और प्लंबिंग सप्लाई की व्यापक रेंज',
-        categories: {
-          pipes: {
-            title: 'पाइप और ट्यूब',
-            items: 'जीआई पाइप, एमएस पाइप, पीवीसी पाइप, सीपीवीसी पाइप, एचडीपीई पाइप, ड्रेनेज पाइप'
-          },
-          fittings: {
-            title: 'पाइप फिटिंग',
-            items: 'एल्बो, टी, रिड्यूसर, कपलिंग, यूनियन, निप्पल, कैप, प्लग'
-          },
-          valves: {
-            title: 'वाल्व और नियंत्रण',
-            items: 'गेट वाल्व, ग्लोब वाल्व, बॉल वाल्व, चेक वाल्व, बटरफ्लाई वाल्व'
-          },
-          flanges: {
-            title: 'फ्लैंज',
-            items: 'स्लिप-ऑन फ्लैंज, वेल्ड नेक फ्लैंज, ब्लाइंड फ्लैंज, थ्रेडेड फ्लैंज'
-          },
-          accessories: {
-            title: 'हार्डवेयर और सामान',
-            items: 'फास्टनर, क्लैंप, ब्रैकेट, गैस्केट, सीलिंग सामग्री'
+        highlights: {
+          sizes: 'कई आकारों और ब्रांडों में उपलब्ध',
+          orders: 'थोक और खुदरा आदेश स्वीकार किए जाते हैं',
+          pricing: 'कीमत के लिए कॉल / व्हाट्सएप करें'
+        },
+        sections: {
+          hardware: {
+            title: '🔧 हार्डवेयर उत्पाद',
+            fasteners: {
+              title: 'फास्टनर',
+              items: ['कीलें', 'पेंच', 'नट और बोल्ट', 'वाशर', 'एंकर फास्टनर']
+            },
+            handTools: {
+              title: 'हाथ के उपकरण',
+              items: ['हथौड़े', 'पेचकसी', 'प्लायर्स', 'स्पैनर और रेंच', 'मापने के उपकरण', 'छेनी और कटर']
+            },
+            powerTools: {
+              title: 'पावर उपकरण',
+              items: ['ड्रिल मशीनें', 'ग्राइंडर', 'कटिंग मशीनें', 'हीट गन', 'इलेक्ट्रिक पेचकसी']
+            },
+            doorFittings: {
+              title: 'दरवाजा और फर्नीचर फिटिंग',
+              items: ['कब्ज', 'दरवाजे की हैंडल और नॉब्स', 'टॉवर बोल्ट', 'दरवाजा स्टॉपर', 'ताले और पैडलॉक']
+            },
+            safety: {
+              title: 'सुरक्षा और उपयोगी वस्तुएं',
+              items: ['सुरक्षा दस्ताने', 'सुरक्षा चश्मा', 'हेलमेट', 'सीढ़ियां']
+            }
           },
           plumbing: {
-            title: 'प्लंबिंग सप्लाई',
-            items: 'नल, शावर, बाथरूम फिटिंग, किचन फिटिंग, पानी की टंकी'
+            title: '🚰 प्लंबिंग और पाइप फिटिंग',
+            pipes: {
+              title: 'पाइप',
+              items: ['पीवीसी पाइप', 'सीपीवीसी पाइप', 'यूपीवीसी पाइप', 'जीआई पाइप', 'एचडीपीई पाइप', 'पीपीआर पाइप']
+            },
+            pipeFittings: {
+              title: 'पाइप फिटिंग',
+              items: ['एल्बो', 'टी', 'कपलर', 'रिड्यूसर', 'यूनियन', 'एंड कैप', 'फ्लैंज']
+            },
+            valvesTaps: {
+              title: 'वाल्व और नल',
+              items: ['बॉल वाल्व', 'गेट वाल्व', 'एंगल वाल्व', 'बीब कॉक', 'पिलर कॉक', 'मिक्सर नल']
+            },
+            bathroomKitchen: {
+              title: 'बाथरूम और रसोई सामान',
+              items: ['शावर हेड', 'लचकदार नली', 'सिंक कपलिंग', 'बोतल ट्रैप', 'फ्लोर ट्रैप']
+            },
+            plumbingTools: {
+              title: 'प्लंबिंग उपकरण और उपभोग्य',
+              items: ['पाइप रेंच', 'पाइप कटर', 'टेफ्लॉन टेप', 'सॉल्वेंट सीमेंट', 'रबर गैस्केट', 'पाइप क्लैंप']
+            }
+          },
+          paints: {
+            title: '🎨 पेंट और पेंटिंग समाधान',
+            wallPaints: {
+              title: 'दीवार पेंट',
+              items: ['आंतरिक दीवार पेंट', 'बाहरी दीवार पेंट', 'इमल्शन पेंट', 'डिसटेम्पर']
+            },
+            industrialPaints: {
+              title: 'औद्योगिक और धातु पेंट',
+              items: ['इनेमल पेंट', 'एंटी-रस्ट पेंट', 'हीट-रेजिस्टेंट पेंट']
+            },
+            surfacePrep: {
+              title: 'सतह की तैयारी',
+              items: ['प्राइमर', 'दीवार पुट्टी', 'वाटरप्रूफिंग कोटिंग']
+            },
+            paintFinishes: {
+              title: 'पेंट फिनिशेस',
+              items: ['मैट फिनिश', 'ग्लॉस फिनिश', 'सैटिन फिनिश', 'टेक्सचर पेंट']
+            },
+            paintingTools: {
+              title: 'पेंटिंग उपकरण',
+              items: ['पेंट ब्रश', 'रोलर', 'रोलर ट्रे', 'स्क्रेपर', 'सैंडपेपर']
+            },
+            thinnersChemicals: {
+              title: 'पतलापन और रसायन',
+              items: ['पेंट थिनर', 'टर्पेन्टाइन तेल', 'पेंट रिमूवर']
+            },
+            woodPolish: {
+              title: 'लकड़ी पॉलिश और वार्निश',
+              items: ['पॉलिश', 'वार्निश', 'स्टेन']
+            }
+          },
+          construction: {
+            title: '🧱 निर्माण सामग्री',
+            cement: {
+              title: 'सीमेंट',
+              items: ['साधारण पोर्टलैंड सीमेंट', 'सफेद सीमेंट']
+            },
+            tileMaterials: {
+              title: 'टाइल सामग्री',
+              items: ['टाइल गोंद', 'टाइल ग्राउट']
+            },
+            gypsum: {
+              title: 'जिप्सम उत्पाद',
+              items: ['जिप्सम बोर्ड', 'जॉइंट कंपाउंड']
+            },
+            waterproofing: {
+              title: 'वाटरप्रूफिंग रसायन',
+              items: ['लिक्विड वाटरप्रूफिंग', 'वाटरप्रूफिंग शीट', 'सीलेंट']
+            }
+          },
+          electrical: {
+            title: '💡 विद्युत उत्पाद',
+            switches: {
+              title: 'स्विच और सामान',
+              items: ['स्विच', 'सॉकेट', 'स्विच बोर्ड']
+            },
+            lighting: {
+              title: 'लाइटिंग',
+              items: ['एलईडी बल्ब', 'ट्यूब लाइट', 'फिक्सचर']
+            },
+            wiring: {
+              title: 'वायरिंग और सुरक्षा',
+              items: ['तार और केबल', 'एमसीबी', 'फ्यूज यूनिट', 'एक्सटेंशन बोर्ड']
+            }
+          },
+          adhesives: {
+            title: '🧰 चिपकने वाले, सीलेंट और विविध',
+            adhesivesGlues: {
+              title: 'चिपकने वाले और गोंद',
+              items: ['लकड़ी का गोंद', 'निर्माण गोंद', 'तत्काल गोंद']
+            },
+            sealants: {
+              title: 'सिलिकॉन सीलेंट',
+              items: ['स्पष्ट सीलेंट', 'रंगीन सीलेंट', 'ध्वनिक सीलेंट']
+            },
+            tapes: {
+              title: 'इंसुलेशन और टेप',
+              items: ['इंसुलेशन टेप', 'डक्ट टेप', 'विद्युत टेप']
+            },
+            misc: {
+              title: 'विविध',
+              items: ['लुब्रिकेंट', 'सफाई ब्रश', 'बाल्टियां', 'रस्सी और जाली', 'टारपॉलिन शीट']
+            }
           }
         },
-        contact: 'विशिष्ट ब्रांड, माप या थोक ऑर्डर के लिए, कृपया सीधे हमसे संपर्क करें।'
+        contactInfo: {
+          title: 'अधिक जानकारी चाहिए?',
+          description: 'विशिष्ट उत्पाद विवरण, उपलब्धता, मूल्य और थोक ऑर्डर के लिए:',
+          call: 'हमें कॉल करें:',
+          whatsapp: 'व्हाट्सएप:',
+          email: 'ईमेल:',
+          sendInquiry: 'पूछताछ भेजें'
+        }
       },
       about: {
         title: 'हरिहर हार्डवेयर के बारे में',
@@ -518,33 +872,151 @@ export class LanguageService {
       products: {
         title: 'उत्पादने आणि सेवा',
         subtitle: 'हार्डवेअर आणि प्लंबिंग पुरवठ्याची व्यापक श्रेणी',
-        categories: {
-          pipes: {
-            title: 'पाईप्स आणि ट्यूब्ज',
-            items: 'जीआय पाईप, एमएस पाईप, पीव्हीसी पाईप, सीपीव्हीसी पाईप, एचडीपीई पाईप, ड्रेनेज पाईप'
-          },
-          fittings: {
-            title: 'पाईप फिटिंग्ज',
-            items: 'एल्बो, टी, रिड्यूसर, कपलिंग, युनियन, निप्पल, कॅप, प्लग'
-          },
-          valves: {
-            title: 'वाल्व्ह आणि नियंत्रणे',
-            items: 'गेट वाल्व्ह, ग्लोब वाल्व्ह, बॉल वाल्व्ह, चेक वाल्व्ह, बटरफ्लाय वाल्व्ह'
-          },
-          flanges: {
-            title: 'फ्लँजेस',
-            items: 'स्लिप-ऑन फ्लँज, वेल्ड नेक फ्लँज, ब्लाइंड फ्लँज, थ्रेडेड फ्लँज'
-          },
-          accessories: {
-            title: 'हार्डवेअर आणि अॅक्सेसरीज',
-            items: 'फास्टनर्स, क्लॅम्प्स, ब्रॅकेट्स, गॅस्केट्स, सीलिंग साहित्य'
+        highlights: {
+          sizes: 'एकाधिक आकार आणि ब्रँड्समध्ये उपलब्ध',
+          orders: 'मोठ्या प्रमाणावर आणि किरकोळ ऑर्डर स्वीकारले जातात',
+          pricing: 'किंमतीसाठी कॉल / व्हाट्सअॅप करा'
+        },
+        sections: {
+          hardware: {
+            title: '🔧 हार्डवेअर उत्पादने',
+            fasteners: {
+              title: 'फास्टनर्स',
+              items: ['खिळा', 'स्क्रू', 'नट आणि बोल्ट', 'वॉशर', 'अँकर फास्टनर्स']
+            },
+            handTools: {
+              title: 'हाताचे साधने',
+              items: ['हातोड्या', 'स्क्रूड्रायव्हर्स', 'प्लायर्स', 'स्पॅनर्स आणि रेंच', 'मोजमाप साधने', 'छेनी आणि कटर']
+            },
+            powerTools: {
+              title: 'पावर साधने',
+              items: ['ड्रिल मशीन', 'ग्राइंडर्स', 'कटिंग मशीन', 'हीट गन', 'इलेक्ट्रिक स्क्रूड्रायव्हर्स']
+            },
+            doorFittings: {
+              title: 'दरवाजा आणि फर्निचर फिटिंग्ज',
+              items: ['बिजाड़े', 'दरवाजा हँडल्स आणि नॉब्स', 'टॉवर बोल्ट्स', 'दरवाजा थांबवणारे', 'तालेबंदी आणि पॅडलॉक']
+            },
+            safety: {
+              title: 'सुरक्षा आणि उपयोगी वस्तू',
+              items: ['सुरक्षा हातमोजे', 'सुरक्षा चश्मा', 'हेलमेट', 'शिडी']
+            }
           },
           plumbing: {
-            title: 'प्लंबिंग पुरवठा',
-            items: 'नळ, शॉवर, बाथरूम फिटिंग्ज, किचन फिटिंग्ज, पाण्याच्या टाक्या'
+            title: '🚰 प्लंबिंग आणि पाईप फिटिंग्ज',
+            pipes: {
+              title: 'पाईप्स',
+              items: ['पीव्हीसी पाईप्स', 'सीपीव्हीसी पाईप्स', 'यूपीव्हीसी पाईप्स', 'जीआय पाईप्स', 'एचडीपीई पाईप्स', 'पीपीआर पाईप्स']
+            },
+            pipeFittings: {
+              title: 'पाईप फिटिंग्ज',
+              items: ['एल्बो', 'टी', 'कपलर्स', 'रीड्यूसर्स', 'युनियन', 'एंड कॅप्स', 'फ्लँजेस']
+            },
+            valvesTaps: {
+              title: 'वाल्व्ह आणि नळ',
+              items: ['बॉल वाल्व्ह', 'गेट वाल्व्ह', 'अँगल वाल्व्ह', 'बीब कॉक्स', 'पिलर कॉक्स', 'मिक्सर नळ']
+            },
+            bathroomKitchen: {
+              title: 'बाथरूम आणि रसोई अॅक्सेसरीज',
+              items: ['शॉवर हेड्स', 'लवचिक नली', 'सिंक कपलिंग', 'बोतल ट्रॅप्स', 'फ्लोर ट्रॅप्स']
+            },
+            plumbingTools: {
+              title: 'प्लंबिंग साधने आणि उपभोग्य',
+              items: ['पाईप रेंच', 'पाईप कटर', 'टेफ्लॉन टेप', 'सॉल्व्हेंट सिमेंट', 'रबर गॅस्केट्स', 'पाईप क्लॅम्प्स']
+            }
+          },
+          paints: {
+            title: '🎨 पेंट आणि पेंटिंग सोल्यूशन्स',
+            wallPaints: {
+              title: 'भिंतीचे पेंट',
+              items: ['आंतरिक भिंतीचे पेंट', 'बाहेरील भिंतीचे पेंट', 'इमल्शन पेंट', 'डिसटेम्परी']
+            },
+            industrialPaints: {
+              title: 'औद्योगिक आणि धातू पेंट',
+              items: ['इनामेल पेंट', 'आणि-जंग पेंट', 'उष्मा-प्रतिरोधी पेंट']
+            },
+            surfacePrep: {
+              title: 'पृष्ठभागाची तयारी',
+              items: ['प्राइमर्स', 'भिंत पुट्टी', 'जलरोधी कोटिंग्ज']
+            },
+            paintFinishes: {
+              title: 'पेंट फिनिशेस',
+              items: ['मैट फिनिश', 'ग्लॉस फिनिश', 'साटिन फिनिश', 'टेक्सचर पेंट']
+            },
+            paintingTools: {
+              title: 'पेंटिंग साधने',
+              items: ['पेंट ब्रश', 'रोलर्स', 'रोलर ट्रे', 'स्क्रेपर्स', 'सँडपेपर']
+            },
+            thinnersChemicals: {
+              title: 'थिनर्स आणि रसायने',
+              items: ['पेंट थिनर', 'टर्पेन्टाइन तेल', 'पेंट रिमूव्हर्स']
+            },
+            woodPolish: {
+              title: 'लाकूड पॉलिश आणि वार्निश',
+              items: ['पॉलिश', 'वार्निश', 'स्टेन']
+            }
+          },
+          construction: {
+            title: '🧱 बांधकाम साहित्य',
+            cement: {
+              title: 'सिमेंट',
+              items: ['सामान्य पोर्टलँड सिमेंट', 'पांढरा सिमेंट']
+            },
+            tileMaterials: {
+              title: 'टाइल साहित्य',
+              items: ['टाइल गोंद', 'टाइल ग्राउट']
+            },
+            gypsum: {
+              title: 'जिप्सम उत्पादने',
+              items: ['जिप्सम बोर्ड्स', 'जॉइंट कंपाउंड']
+            },
+            waterproofing: {
+              title: 'जलरोधी रसायने',
+              items: ['लिक्विड जलरोधक', 'जलरोधी शीट्स', 'सीलँट्स']
+            }
+          },
+          electrical: {
+            title: '💡 विद्युत उत्पादने',
+            switches: {
+              title: 'स्विच आणि अॅक्सेसरीज',
+              items: ['स्विच', 'सॉकेट्स', 'स्विच बोर्ड्स']
+            },
+            lighting: {
+              title: 'प्रकाश व्यवस्था',
+              items: ['एलईडी बल्ब', 'ट्यूब लाइट्स', 'फिक्सचर्स']
+            },
+            wiring: {
+              title: 'वायरिंग आणि सुरक्षा',
+              items: ['तार आणि केबल्स', 'एमसीबी', 'फ्यूज युनिट्स', 'एक्सटेन्शन बोर्ड्स']
+            }
+          },
+          adhesives: {
+            title: '🧰 अॅडहेसिव्ह्स, सीलँट्स आणि विविध',
+            adhesivesGlues: {
+              title: 'अॅडहेसिव्ह्स आणि गोंद',
+              items: ['लाकूड गोंद', 'बांधकाम गोंद', 'तात्काळ गोंद']
+            },
+            sealants: {
+              title: 'सिलिकॉन सीलँट्स',
+              items: ['स्पष्ट सीलँट', 'रंगीन सीलँट', 'ध्वनिक सीलँट']
+            },
+            tapes: {
+              title: 'इन्सुलेशन आणि टेप',
+              items: ['इन्सुलेशन टेप', 'डक्ट टेप', 'विद्युत टेप']
+            },
+            misc: {
+              title: 'विविध',
+              items: ['स्नेहक', 'साफ करणारे ब्रश', 'बादल्या', 'दोरी आणि जाळी', 'टारपॉलिन शीट्स']
+            }
           }
         },
-        contact: 'विशिष्ट ब्रँड, माप किंवा मोठ्या प्रमाणावरील ऑर्डरसाठी, कृपया थेट आमच्याशी संपर्क साधा.'
+        contactInfo: {
+          title: 'आणखी माहिती हवी?',
+          description: 'विशिष्ट उत्पाद तपशील, उपलब्धता, किंमत आणि मोठ्या प्रमाणातील ऑर्डरसाठी:',
+          call: 'आमला कॉल करा:',
+          whatsapp: 'व्हाट्सअॅप:',
+          email: 'ई-मेल:',
+          sendInquiry: 'विचारणा पाठवा'
+        }
       },
       about: {
         title: 'हरिहर हार्डवेअर बद्दल',
@@ -642,7 +1114,12 @@ export class LanguageService {
 
     for (const k of keys) {
       if (value && typeof value === 'object') {
-        value = value[k];
+        // Handle array indices
+        if (Array.isArray(value) && !isNaN(Number(k))) {
+          value = value[Number(k)];
+        } else {
+          value = value[k];
+        }
       } else {
         return key;
       }
