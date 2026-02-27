@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
     message: ['', Validators.required]
   });
 
-  translate(key: string): string | string[] {
+  translate(key: string): any {
     return this.languageService.translate(key);
   }
 

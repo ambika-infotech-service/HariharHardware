@@ -41,7 +41,7 @@ export class ProductsComponent implements OnInit {
     this.productSections.set(this.productsService.getProductSections());
   }
 
-  translate(key: string): string | string[] {
+  translate(key: string): any {
     return this.languageService.translate(key);
   }
 }

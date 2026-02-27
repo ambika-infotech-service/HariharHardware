@@ -3,7 +3,7 @@ import { Injectable, signal } from '@angular/core';
 export type Language = 'en' | 'gu' | 'hi' | 'mr';
 
 export interface Translation {
-  [key: string]: string | string[] | Translation;
+  [key: string]: string | string[] | Translation | any;
 }
 
 @Injectable({
@@ -20,6 +20,7 @@ export class LanguageService {
         home: 'Home',
         products: 'Products',
         about: 'About',
+        faq: 'FAQ',
         contact: 'Contact'
       },
       home: {
@@ -283,6 +284,64 @@ export class LanguageService {
           focus: 'Customer Focus'
         }
       },
+      faq: {
+        title: 'Frequently Asked Questions (FAQs)',
+        subtitle: 'Find answers to common questions about our products and services',
+        items: [
+          {
+            question: 'Where is Harihar Hardware & Paint located?',
+            answer: 'Harihar Hardware & Paint is located on Gota Road, Ahmedabad, at Gota Cross Road, opposite Ambika Dalvada, making it easy to find for first-time visitors.'
+          },
+          {
+            question: 'How long has Harihar Hardware & Paint been in business?',
+            answer: 'Harihar Hardware & Paint has been serving customers since 2002, with over 20 years of experience in the hardware and building materials industry.'
+          },
+          {
+            question: 'What products are available at Harihar Hardware & Paint?',
+            answer: 'We offer a wide range of products including hardware tools, pipes, pipe fittings, PVC pipes, valves, plumbing supplies, sanitaryware, paints, power tools, hand tools, fasteners, and building materials.'
+          },
+          {
+            question: 'Do you sell plumbing and pipe fitting materials?',
+            answer: 'Yes, we specialize in pipes, pipe fittings, valves, and plumbing supplies for residential, commercial, and industrial projects.'
+          },
+          {
+            question: 'Can contractors and builders purchase materials in bulk?',
+            answer: 'Yes, contractors, plumbers, builders, and electricians regularly purchase materials from us. We maintain good stock levels and support bulk and repeat requirements.'
+          },
+          {
+            question: 'Do you provide assistance in choosing the right products?',
+            answer: 'Yes, our experienced staff helps customers select the right hardware and plumbing materials based on project requirements.'
+          },
+          {
+            question: 'Do you provide plumbers or electricians?',
+            answer: 'We primarily sell hardware and building materials. However, we can suggest reliable plumbers or electricians if required.'
+          },
+          {
+            question: 'What are the working hours of Harihar Hardware & Paint?',
+            answer: 'Our store is open from 8:30 AM to 8:00 PM (Monday to Saturday) and 8:30 AM to 12:00 PM on Sundays.'
+          },
+          {
+            question: 'What payment methods are accepted?',
+            answer: 'We accept Cash, UPI, BHIM, Paytm, Google Pay, Amazon Pay, and PhonePe for customer convenience.'
+          },
+          {
+            question: 'Do you accept returns or exchanges?',
+            answer: 'Used items cannot be returned. However, customers may check with our staff regarding possible exchanges, subject to product condition and store policy.'
+          },
+          {
+            question: 'Is Harihar Hardware & Paint suitable for residential and industrial projects?',
+            answer: 'Yes, we supply materials for small household repairs, residential projects, commercial work, and industrial requirements.'
+          },
+          {
+            question: 'Why should I choose Harihar Hardware & Paint in Gota Road?',
+            answer: 'With 20+ years of experience, quality products, trusted brands, knowledgeable staff, and a convenient Gota Road location, Harihar Hardware & Paint is a reliable hardware store in Ahmedabad.'
+          }
+        ],
+        cta: {
+          title: 'Still Have Questions?',
+          description: 'Feel free to reach out to us for any additional information or specific product inquiries.'
+        }
+      },
       contact: {
         title: 'Contact Us',
         subtitle: 'Get in touch for quotes, inquiries, or bulk orders',
@@ -341,6 +400,7 @@ export class LanguageService {
         home: 'હોમ',
         products: 'ઉત્પાદનો',
         about: 'વિશે',
+        faq: 'સામાન્ય પ્રશ્નો',
         contact: 'સંપર્ક'
       },
       home: {
@@ -604,6 +664,64 @@ export class LanguageService {
           focus: 'ગ્રાહક ફોકસ'
         }
       },
+      faq: {
+        title: 'સામાન્ય રીતે પૂછવામાં આવતા પ્રશ્નો (FAQs)',
+        subtitle: 'અમારા ઉત્પાદનો અને સેવાઓ વિશેના સામાન્ય પ્રશ્નોના જવાબો શોધો',
+        items: [
+          {
+            question: 'હરિહર હાર્ડવેર અને પેઇન્ટ ક્યાં સ્થિત છે?',
+            answer: 'હરિહર હાર્ડવેર અને પેઇન્ટ ગોતા રોડ, અમદાવાદ ખાતે, ગોતા ક્રોસ રોડ પર, અંબિકા ડાળવાડા સામે સ્થિત છે, જે પ્રથમ વખત મુલાકાત લેનારાઓ માટે સરળતાથી શોધી શકાય તેવું છે.'
+          },
+          {
+            question: 'હરિહર હાર્ડવેર અને પેઇન્ટ કેટલા સમયથી વ્યવસાયમાં છે?',
+            answer: 'હરિહર હાર્ડવેર અને પેઇન્ટ 2002 થી ગ્રાહકોની સેવા કરી રહ્યું છે, હાર્ડવેર અને બિલ્ડિંગ સામગ્રી ઉદ્યોગમાં 20 વર્ષથી વધુનો અનુભવ સાથે.'
+          },
+          {
+            question: 'હરિહર હાર્ડવેર અને પેઇન્ટ ખાતે કયા ઉત્પાદનો ઉપલબ્ધ છે?',
+            answer: 'અમે હાર્ડવેર સાધનો, પાઇપ્સ, પાઇપ ફિટિંગ્સ, પીવીસી પાઇપ્સ, વાલ્વ્સ, પ્લમ્બિંગ સપ્લાય, સેનિટરીવેર, પેઇન્ટ્સ, પાવર ટૂલ્સ, હેન્ડ ટૂલ્સ, ફાસ્ટનર્સ અને બિલ્ડિંગ સામગ્રી સહિત ઉત્પાદનોની વિશાળ શ્રેણી પ્રદાન કરીએ છીએ.'
+          },
+          {
+            question: 'શું તમે પ્લમ્બિંગ અને પાઇપ ફિટિંગ સામગ્રી વેચો છો?',
+            answer: 'હા, અમે રહેણાંક, વ્યાવસાયિક અને ઔદ્યોગિક પ્રોજેક્ટ્સ માટે પાઇપ્સ, પાઇપ ફિટિંગ્સ, વાલ્વ્સ અને પ્લમ્બિંગ સપ્લાયમાં વિશેષતા ધરાવીએ છીએ.'
+          },
+          {
+            question: 'શું કોન્ટ્રાક્ટર અને બિલ્ડર્સ બલ્કમાં સામગ્રી ખરીદી શકે છે?',
+            answer: 'હા, કોન્ટ્રાક્ટર્સ, પ્લમ્બર્સ, બિલ્ડર્સ અને ઇલેક્ટ્રિશિયન નિયમિતપણે અમારી પાસેથી સામગ્રી ખરીદે છે. અમે સારા સ્ટોક સ્તરો જાળવીએ છીએ અને બલ્ક અને પુનરાવર્તિત જરૂરિયાતોને સપોર્ટ કરીએ છીએ.'
+          },
+          {
+            question: 'શું તમે યોગ્ય ઉત્પાદનોની પસંદગીમાં સહાયતા પ્રદાન કરો છો?',
+            answer: 'હા, અમારો અનુભવી સ્ટાફ ગ્રાહકોને પ્રોજેક્ટની જરૂરિયાતોના આધારે યોગ્ય હાર્ડવેર અને પ્લમ્બિંગ સામગ્રી પસંદ કરવામાં મદદ કરે છે.'
+          },
+          {
+            question: 'શું તમે પ્લમ્બર અથવા ઇલેક્ટ્રિશિયન પ્રદાન કરો છો?',
+            answer: 'અમે મુખ્યત્વે હાર્ડવેર અને બિલ્ડિંગ સામગ્રી વેચીએ છીએ. જો કે, જો જરૂરી હોય તો અમે વિશ્વસનીય પ્લમ્બર અથવા ઇલેક્ટ્રિશિયન સૂચવી શકીએ છીએ.'
+          },
+          {
+            question: 'હરિહર હાર્ડવેર અને પેઇન્ટના કામના કલાકો શું છે?',
+            answer: 'અમારો સ્ટોર સવારે 8:30 થી સાંજે 8:00 વાગ્યા (સોમવારથી શનિવાર) અને રવિવારે સવારે 8:30 થી બપોરે 12:00 વાગ્યા સુધી ખુલ્લો રહે છે.'
+          },
+          {
+            question: 'કઈ ચુકવણી પદ્ધતિઓ સ્વીકારવામાં આવે છે?',
+            answer: 'અમે ગ્રાહક સગવડ માટે રોકડ, UPI, BHIM, Paytm, Google Pay, Amazon Pay અને PhonePe સ્વીકારીએ છીએ.'
+          },
+          {
+            question: 'શું તમે રિટર્ન અથવા એક્સચેન્જ સ્વીકારો છો?',
+            answer: 'વપરાયેલી વસ્તુઓ પરત કરી શકાતી નથી. જો કે, ગ્રાહકો ઉત્પાદનની સ્થિતિ અને સ્ટોર નીતિને આધીન, સંભવિત એક્સચેન્જ અંગે અમારા સ્ટાફ સાથે ચકાસી શકે છે.'
+          },
+          {
+            question: 'શું હરિહર હાર્ડવેર અને પેઇન્ટ રહેણાંક અને ઔદ્યોગિક પ્રોજેક્ટ્સ માટે યોગ્ય છે?',
+            answer: 'હા, અમે નાના ઘરગથ્થુ સમારકામ, રહેણાંક પ્રોજેક્ટ્સ, વ્યાવસાયિક કામ અને ઔદ્યોગિક જરૂરિયાતો માટે સામગ્રી પૂરી પાડીએ છીએ.'
+          },
+          {
+            question: 'હું ગોતા રોડમાં હરિહર હાર્ડવેર અને પેઇન્ટ કેમ પસંદ કરું?',
+            answer: '20+ વર્ષના અનુભવ, ગુણવત્તાયુક્ત ઉત્પાદનો, વિશ્વસનીય બ્રાન્ડ્સ, જાણકાર સ્ટાફ અને સુવિધાજનક ગોતા રોડ સ્થાન સાથે, હરિહર હાર્ડવેર અને પેઇન્ટ અમદાવાદમાં એક વિશ્વસનીય હાર્ડવેર સ્ટોર છે.'
+          }
+        ],
+        cta: {
+          title: 'હજી પણ પ્રશ્નો છે?',
+          description: 'કૃપા કરીને કોઈપણ વધારાની માહિતી અથવા વિશિષ્ટ ઉત્પાદન પૂછપરછ માટે અમારો સંપર્ક કરવા માટે અચકાશો નહીં.'
+        }
+      },
       contact: {
         title: 'અમારો સંપર્ક કરો',
         subtitle: 'ભાવ, પૂછપરછ અથવા બલ્ક ઓર્ડર માટે સંપર્કમાં રહો',
@@ -662,6 +780,7 @@ export class LanguageService {
         home: 'होम',
         products: 'उत्पाद',
         about: 'परिचय',
+        faq: 'सामान्य प्रश्न',
         contact: 'संपर्क'
       },
       home: {
@@ -925,6 +1044,64 @@ export class LanguageService {
           focus: 'ग्राहक फोकस'
         }
       },
+      faq: {
+        title: 'अक्सर पूछे जाने वाले प्रश्न (FAQs)',
+        subtitle: 'हमारे उत्पादों और सेवाओं के बारे में सामान्य प्रश्नों के उत्तर खोजें',
+        items: [
+          {
+            question: 'हरिहर हार्डवेयर और पेंट कहाँ स्थित है?',
+            answer: 'हरिहर हार्डवेयर और पेंट गोता रोड, अहमदाबाद में, गोता क्रॉस रोड पर, अंबिका दालवाडा के सामने स्थित है, जो पहली बार आने वालों के लिए आसानी से मिल जाता है।'
+          },
+          {
+            question: 'हरिहर हार्डवेयर और पेंट कब से व्यवसाय में है?',
+            answer: 'हरिहर हार्डवेयर और पेंट 2002 से ग्राहकों की सेवा कर रहा है, हार्डवेयर और निर्माण सामग्री उद्योग में 20 वर्षों से अधिक के अनुभव के साथ।'
+          },
+          {
+            question: 'हरिहर हार्डवेयर और पेंट पर कौन से उत्पाद उपलब्ध हैं?',
+            answer: 'हम हार्डवेयर उपकरण, पाइप, पाइप फिटिंग, पीवीसी पाइप, वाल्व, प्लंबिंग सप्लाई, सैनिटरीवेयर, पेंट, पावर टूल्स, हैंड टूल्स, फास्टनर और निर्माण सामग्री सहित उत्पादों की एक विस्तृत श्रृंखला प्रदान करते हैं।'
+          },
+          {
+            question: 'क्या आप प्लंबिंग और पाइप फिटिंग सामग्री बेचते हैं?',
+            answer: 'हां, हम आवासीय, वाणिज्यिक और औद्योगिक परियोजनाओं के लिए पाइप, पाइप फिटिंग, वाल्व और प्लंबिंग सप्लाई में विशेषज्ञ हैं।'
+          },
+          {
+            question: 'क्या ठेकेदार और बिल्डर्स थोक में सामग्री खरीद सकते हैं?',
+            answer: 'हां, ठेकेदार, प्लंबर, बिल्डर और इलेक्ट्रीशियन नियमित रूप से हमसे सामग्री खरीदते हैं। हम अच्छे स्टॉक स्तर बनाए रखते हैं और थोक और दोहराई जाने वाली आवश्यकताओं का समर्थन करते हैं।'
+          },
+          {
+            question: 'क्या आप सही उत्पाद चुनने में सहायता प्रदान करते हैं?',
+            answer: 'हां, हमारा अनुभवी स्टाफ ग्राहकों को परियोजना की आवश्यकताओं के आधार पर सही हार्डवेयर और प्लंबिंग सामग्री चुनने में मदद करता है।'
+          },
+          {
+            question: 'क्या आप प्लंबर या इलेक्ट्रीशियन प्रदान करते हैं?',
+            answer: 'हम मुख्य रूप से हार्डवेयर और निर्माण सामग्री बेचते हैं। हालांकि, यदि आवश्यक हो तो हम विश्वसनीय प्लंबर या इलेक्ट्रीशियन सुझा सकते हैं।'
+          },
+          {
+            question: 'हरिहर हार्डवेयर और पेंट के काम के घंटे क्या हैं?',
+            answer: 'हमारा स्टोर सुबह 8:30 से शाम 8:00 बजे (सोमवार से शनिवार) और रविवार को सुबह 8:30 से दोपहर 12:00 बजे तक खुला रहता है।'
+          },
+          {
+            question: 'कौन से भुगतान तरीके स्वीकार किए जाते हैं?',
+            answer: 'हम ग्राहक सुविधा के लिए नकद, UPI, BHIM, Paytm, Google Pay, Amazon Pay और PhonePe स्वीकार करते हैं।'
+          },
+          {
+            question: 'क्या आप रिटर्न या एक्सचेंज स्वीकार करते हैं?',
+            answer: 'उपयोग की गई वस्तुओं को वापस नहीं किया जा सकता। हालांकि, ग्राहक उत्पाद की स्थिति और स्टोर नीति के अधीन, संभावित एक्सचेंज के बारे में हमारे स्टाफ से जांच कर सकते हैं।'
+          },
+          {
+            question: 'क्या हरिहर हार्डवेयर और पेंट आवासीय और औद्योगिक परियोजनाओं के लिए उपयुक्त है?',
+            answer: 'हां, हम छोटी घरेलू मरम्मत, आवासीय परियोजनाओं, वाणिज्यिक कार्य और औद्योगिक आवश्यकताओं के लिए सामग्री की आपूर्ति करते हैं।'
+          },
+          {
+            question: 'मुझे गोता रोड में हरिहर हार्डवेयर और पेंट क्यों चुनना चाहिए?',
+            answer: '20+ वर्षों के अनुभव, गुणवत्ता उत्पादों, विश्वसनीय ब्रांडों, जानकार स्टाफ और एक सुविधाजनक गोता रोड स्थान के साथ, हरिहर हार्डवेयर और पेंट अहमदाबाद में एक विश्वसनीय हार्डवेयर स्टोर है।'
+          }
+        ],
+        cta: {
+          title: 'अभी भी प्रश्न हैं?',
+          description: 'किसी भी अतिरिक्त जानकारी या विशिष्ट उत्पाद पूछताछ के लिए बेझिझक हमसे संपर्क करें।'
+        }
+      },
       contact: {
         title: 'हमसे संपर्क करें',
         subtitle: 'भाव, पूछताछ या थोक ऑर्डर के लिए संपर्क में रहें',
@@ -983,6 +1160,7 @@ export class LanguageService {
         home: 'होम',
         products: 'उत्पादने',
         about: 'आमच्याबद्दल',
+        faq: 'सामान्य प्रश्न',
         contact: 'संपर्क'
       },
       home: {
@@ -1246,6 +1424,64 @@ export class LanguageService {
           focus: 'ग्राहक फोकस'
         }
       },
+      faq: {
+        title: 'वारंवार विचारले जाणारे प्रश्न (FAQs)',
+        subtitle: 'आमच्या उत्पादने आणि सेवांबद्दल सामान्य प्रश्नांची उत्तरे शोधा',
+        items: [
+          {
+            question: 'हरिहर हार्डवेअर आणि पेंट कोठे स्थित आहे?',
+            answer: 'हरिहर हार्डवेअर आणि पेंट गोता रोड, अहमदाबाद येथे, गोता क्रॉस रोड वर, अंबिका दाळवाडा समोर स्थित आहे, जे प्रथमच भेट देणाऱ्यांना सहजपणे शोधता येते.'
+          },
+          {
+            question: 'हरिहर हार्डवेअर आणि पेंट किती वर्षांपासून व्यवसायात आहे?',
+            answer: 'हरिहर हार्डवेअर आणि पेंट 2002 पासून ग्राहकांची सेवा करत आहे, हार्डवेअर आणि बांधकाम साहित्य उद्योगात 20 वर्षांहून अधिक अनुभवासह.'
+          },
+          {
+            question: 'हरिहर हार्डवेअर आणि पेंट येथे कोणती उत्पादने उपलब्ध आहेत?',
+            answer: 'आम्ही हार्डवेअर साधने, पाईप्स, पाईप फिटिंग्ज, पीव्हीसी पाईप्स, वाल्व्ह, प्लंबिंग पुरवठा, सेनीटरीवेअर, पेंट्स, पॉवर टूल्स, हँड टूल्स, फास्टनर्स आणि बांधकाम साहित्य यासह उत्पादनांची विस्तृत श्रेणी देऊ करतो.'
+          },
+          {
+            question: 'तुम्ही प्लंबिंग आणि पाईप फिटिंग साहित्य विकता का?',
+            answer: 'होय, आम्ही निवासी, व्यावसायिक आणि औद्योगिक प्रकल्पांसाठी पाईप्स, पाईप फिटिंग्ज, वाल्व्ह आणि प्लंबिंग पुरवठ्यात तज्ञ आहोत.'
+          },
+          {
+            question: 'कंत्राटदार आणि बिल्डर्स मोठ्या प्रमाणात साहित्य खरेदी करू शकतात का?',
+            answer: 'होय, कंत्राटदार, प्लंबर, बिल्डर्स आणि इलेक्ट्रीशियन नियमितपणे आमच्याकडून साहित्य खरेदी करतात. आम्ही चांगले स्टॉक पातळी राखतो आणि मोठ्या प्रमाणातील आणि पुनरावृत्ती आवश्यकतांना समर्थन करतो.'
+          },
+          {
+            question: 'तुम्ही योग्य उत्पादने निवडण्यात मदत पुरवता का?',
+            answer: 'होय, आमचे अनुभवी कर्मचारी ग्राहकांना प्रकल्प आवश्यकतांवर आधारित योग्य हार्डवेअर आणि प्लंबिंग साहित्य निवडण्यात मदत करतात.'
+          },
+          {
+            question: 'तुम्ही प्लंबर किंवा इलेक्ट्रीशियन पुरवता का?',
+            answer: 'आम्ही मुख्यत्वे हार्डवेअर आणि बांधकाम साहित्य विकतो. तथापि, आवश्यकता असल्यास आम्ही विश्वासार्ह प्लंबर किंवा इलेक्ट्रीशियनचे सुचवू शकतो.'
+          },
+          {
+            question: 'हरिहर हार्डवेअर आणि पेंटचे कामकाजाचे तास काय आहेत?',
+            answer: 'आमचे स्टोअर सकाळी 8:30 ते संध्याकाळी 8:00 (सोमवार ते शनिवार) आणि रविवारी सकाळी 8:30 ते दुपारी 12:00 वाजेपर्यंत खुले असते.'
+          },
+          {
+            question: 'कोणत्या पेमेंट पद्धती स्वीकारल्या जातात?',
+            answer: 'आम्ही ग्राहक सोयीसाठी रोख, UPI, BHIM, Paytm, Google Pay, Amazon Pay आणि PhonePe स्वीकारतो.'
+          },
+          {
+            question: 'तुम्ही रिटर्न किंवा एक्सचेंज स्वीकारता का?',
+            answer: 'वापरलेल्या वस्तू परत केल्या जाऊ शकत नाहीत. तथापि, ग्राहक उत्पादनाची स्थिती आणि स्टोअर धोरणाच्या अधीन, संभाव्य एक्सचेंजबद्दल आमच्या कर्मचाऱ्यांशी तपासू शकतात.'
+          },
+          {
+            question: 'हरिहर हार्डवेअर आणि पेंट निवासी आणि औद्योगिक प्रकल्पांसाठी योग्य आहे का?',
+            answer: 'होय, आम्ही लहान घरगुती दुरुस्ती, निवासी प्रकल्प, व्यावसायिक काम आणि औद्योगिक आवश्यकतांसाठी साहित्य पुरवतो.'
+          },
+          {
+            question: 'मी गोता रोडमध्ये हरिहर हार्डवेअर आणि पेंट का निवडावे?',
+            answer: '20+ वर्षांचा अनुभव, दर्जेदार उत्पादने, विश्वासार्ह ब्रँड्स, जाणकार कर्मचारी आणि सोयीचे गोता रोड स्थान यासह, हरिहर हार्डवेअर आणि पेंट अहमदाबादमधील एक विश्वासार्ह हार्डवेअर स्टोअर आहे.'
+          }
+        ],
+        cta: {
+          title: 'अजूनही प्रश्न आहेत?',
+          description: 'कोणत्याही अतिरिक्त माहितीसाठी किंवा विशिष्ट उत्पादन चौकशीसाठी आमच्याशी संपर्क साधण्यास मोकळ्या मनाने.'
+        }
+      },
       contact: {
         title: 'आमच्याशी संपर्क साधा',
         subtitle: 'भाव, चौकशी किंवा मोठ्या प्रमाणावरील ऑर्डरसाठी संपर्कात रहा',
@@ -1308,7 +1544,7 @@ export class LanguageService {
     }
   }
 
-  translate(key: string): string | string[] {
+  translate(key: string): any {
     const keys = key.split('.');
     let value: any = this.translations[this.currentLanguage()];
 
@@ -1325,8 +1561,8 @@ export class LanguageService {
       }
     }
 
-    // Return the value if it's a string or array, otherwise return the key
-    return typeof value === 'string' || Array.isArray(value) ? value : key;
+    // Return the value (can be string, array, or object)
+    return value !== undefined ? value : key;
   }
 
   constructor() {

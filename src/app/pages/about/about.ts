@@ -24,7 +24,7 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  translate(key: string): string | string[] {
+  translate(key: string): any {
     return this.languageService.translate(key);
   }
 

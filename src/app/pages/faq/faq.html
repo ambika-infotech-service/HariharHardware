@@ -1,0 +1,62 @@
+<!-- Page Header -->
+<section class="page-header">
+  <div class="animated-bg">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  <div class="shimmer-line"></div>
+  <div class="container">
+    <h1 class="display-5 fw-bold mb-2">{{ translate('faq.title') }}</h1>
+    <p class="lead mb-0">{{ translate('faq.subtitle') }}</p>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="faq-list">
+          @for (item of faqItems; track $index) {
+            <div class="faq-item">
+              <div class="faq-question">
+                <span class="faq-number">{{ $index + 1 }}.</span>
+                <h3>{{ item.question }}</h3>
+              </div>
+              <div class="faq-answer">
+                <p>{{ item.answer }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="contact-cta py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="fw-bold mb-3">{{ translate('faq.cta.title') }}</h2>
+        <p class="lead text-muted mb-4">{{ translate('faq.cta.description') }}</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="tel:+919879406839" class="btn btn-primary btn-lg">
+            <i class="bi bi-telephone-fill me-2"></i>
+            {{ translate('home.cta.callButton') }}
+          </a>
+          <a href="https://wa.me/919879406839" target="_blank" class="btn btn-success btn-lg">
+            <i class="bi bi-whatsapp me-2"></i>
+            {{ translate('home.cta.whatsappButton') }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
