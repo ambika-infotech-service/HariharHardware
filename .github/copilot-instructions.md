@@ -11,6 +11,7 @@ Use Angular CLI to generate components, services, and other Angular constructs. 
 
 ## Angular Best Practices
 
+- Use Angular CLI to generate components, services, and other Angular constructs
 - Always use standalone components over NgModules
 - Must NOT set `standalone: true` inside Angular decorators. It's the default in Angular v20+.
 - Use signals for state management
