@@ -2,84 +2,137 @@
 <section class="page-header">
   <div class="container">
     <h1 class="display-5 fw-bold mb-2">{{ translate('products.title') }}</h1>
-    <p class="lead mb-0">{{ translate('products.subtitle') }}</p>
+    <p class="lead mb-0">Complete Range of Hardware, Plumbing, Paints & Construction Materials</p>
+  </div>
+</section>
+
+<!-- Product Highlights -->
+<section class="highlights-section py-4 bg-light">
+  <div class="container">
+    <div class="row g-3 text-center">
+      <div class="col-md-4">
+        <div class="highlight-item">
+          <i class="bi bi-box-fill text-primary me-2"></i>
+          <strong>Multiple Sizes & Brands</strong>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="highlight-item">
+          <i class="bi bi-basket-fill text-success me-2"></i>
+          <strong>Bulk & Retail Orders Accepted</strong>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="highlight-item">
+          <i class="bi bi-telephone-fill text-info me-2"></i>
+          <strong>Call / WhatsApp for Price</strong>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Products Section -->
 <section class="products-section py-5">
   <div class="container">
-    <div class="row g-4">
-      @for (category of productCategories; track category.key) {
-        <div class="col-lg-6">
-          <div class="product-category-card">
-            <div class="d-flex align-items-start">
-              <div class="category-icon me-3">
-                <i [class]="category.icon"></i>
+    @for (section of productSections(); track section.id) {
+      <div class="section-container mb-5">
+        <!-- Section Header -->
+        <div class="section-header mb-4">
+          <h2 class="fw-bold d-flex align-items-center gap-2">
+            <i [class]="section.icon"></i>
+            {{ section.title }}
+          </h2>
+          <hr class="my-3" />
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="row g-4">
+          @for (category of section.categories; track category.id) {
+            <div class="col-lg-6">
+              <div class="product-category-card">
+                <div class="card-header">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <i [class]="'bi ' + category.icon" style="font-size: 1.5rem"></i>
+                    <h4 class="fw-bold m-0">{{ category.title }}</h4>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="product-list">
+                    @for (item of category.items; track item.name) {
+                      <li class="product-item">{{ item.name }}</li>
+                    }
+                  </ul>
+                </div>
               </div>
-              <div class="flex-grow-1">
-                <h4 class="fw-bold mb-3">
-                  {{ translate('products.categories.' + category.key + '.title') }}
-                </h4>
-                <p class="text-muted mb-0">
-                  {{ translate('products.categories.' + category.key + '.items') }}
-                </p>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Contact Notice -->
+    <div class="contact-notice mt-5 pt-5 border-top">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="alert alert-info py-4 px-4">
+            <div class="d-flex align-items-start gap-3">
+              <div>
+                <i class="bi bi-info-circle-fill h4 mb-0 text-info"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-2">Need More Information?</h5>
+                <p class="mb-2">For specific product details, availability, pricing, and bulk orders:</p>
+                <ul class="mb-0">
+                  <li><strong>Call Us:</strong> +91-9898659470</li>
+                  <li><strong>WhatsApp:</strong> +91-9898659470</li>
+                  <li><strong>Email:</strong> Contact us through our contact page</li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      }
-    </div>
 
-    <!-- Contact Notice -->
-    <div class="contact-notice mt-5">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <div class="alert alert-info">
-            <i class="bi bi-info-circle-fill me-2"></i>
-            {{ translate('products.contact') }}
+          <div class="text-center mt-4">
+            <a routerLink="/contact" class="btn btn-primary btn-lg">
+              <i class="bi bi-envelope-fill me-2"></i>
+              Send Inquiry
+            </a>
           </div>
-          <a routerLink="/contact" class="btn btn-primary btn-lg">
-            <i class="bi bi-envelope-fill me-2"></i>
-            {{ translate('nav.contact') }}
-          </a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Additional Services -->
-<section class="services-section py-5 bg-light">
+<!-- Additional Information -->
+<section class="info-section py-5 bg-light">
   <div class="container">
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="service-card text-center">
-          <div class="service-icon mb-3">
+        <div class="info-card text-center">
+          <div class="info-icon mb-3">
             <i class="bi bi-box-seam"></i>
           </div>
-          <h5 class="fw-bold">Bulk Orders</h5>
-          <p class="text-muted mb-0">Special pricing and arrangements for large quantity orders</p>
+          <h5 class="fw-bold">Available Sizes & Brands</h5>
+          <p class="text-muted mb-0">Wide range of variants and premium brands in stock</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="service-card text-center">
-          <div class="service-icon mb-3">
-            <i class="bi bi-truck"></i>
+        <div class="info-card text-center">
+          <div class="info-icon mb-3">
+            <i class="bi bi-basket"></i>
           </div>
-          <h5 class="fw-bold">Quick Supply</h5>
-          <p class="text-muted mb-0">Fast delivery for commonly stocked items in the local area</p>
+          <h5 class="fw-bold">Bulk & Retail</h5>
+          <p class="text-muted mb-0">Flexible ordering - whether you need one item or quantities</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="service-card text-center">
-          <div class="service-icon mb-3">
+        <div class="info-card text-center">
+          <div class="info-icon mb-3">
             <i class="bi bi-chat-dots"></i>
           </div>
-          <h5 class="fw-bold">Expert Guidance</h5>
-          <p class="text-muted mb-0">
-            Help with product selection and specifications for your project
-          </p>
+          <h5 class="fw-bold">Expert Support</h5>
+          <p class="text-muted mb-0">Get specifications, recommendations, and competitive pricing</p>
         </div>
       </div>
     </div>

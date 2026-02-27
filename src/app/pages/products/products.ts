@@ -1,40 +1,39 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
+import { ProductsService, ProductSection } from '../../services/products.service';
 
 @Component({
   selector: 'app-products',
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   templateUrl: './products.html',
-  styleUrl: './products.scss'
+  styleUrl: './products.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsComponent implements OnInit {
   private languageService = inject(LanguageService);
   private seo = inject(SeoService);
+  private productsService = inject(ProductsService);
+
+  protected productSections = signal<ProductSection[]>([]);
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
-      title: 'Products - Harihar Hardware | Pipes, Valves, Fittings & Plumbing Supplies',
-      description: 'Browse our extensive range of hardware products including pipes, valves, fittings, flanges, plumbing supplies and industrial accessories. Quality products at competitive prices.',
-      keywords: 'pipes, valves, fittings, flanges, plumbing supplies, hardware products, industrial accessories, pipe fittings, Ahmedabad hardware',
-      ogTitle: 'Products - Harihar Hardware | Pipes, Valves & Fittings',
-      ogDescription: 'Browse our extensive range of hardware products including pipes, valves, fittings, and plumbing supplies.',
+      title: 'Products - Harihar Hardware | Hardware, Pipes, Valves, Paints & More',
+      description: 'Browse our extensive range of hardware, plumbing, paints, construction materials, electrical products and more. Available in multiple sizes & brands. Bulk & retail orders accepted.',
+      keywords: 'hardware products, pipes, valves, fittings, paints, tools, fasteners, construction materials, Ahmedabad',
+      ogTitle: 'Products - Harihar Hardware | Complete Hardware Solutions',
+      ogDescription: 'Explore our complete range of hardware products including pipes, valves, tools, paints and accessories.',
       ogUrl: 'https://hariharhardware.ambikainfotech.online/products',
       canonical: 'https://hariharhardware.ambikainfotech.online/products'
     });
+
+    this.productSections.set(this.productsService.getProductSections());
   }
 
   translate(key: string): string {
     return this.languageService.translate(key);
   }
-
-  protected readonly productCategories = [
-    { icon: 'bi-pip', key: 'pipes' },
-    { icon: 'bi-diagram-3', key: 'fittings' },
-    { icon: 'bi-droplet', key: 'valves' },
-    { icon: 'bi-disc', key: 'flanges' },
-    { icon: 'bi-tools', key: 'accessories' },
-    { icon: 'bi-water', key: 'plumbing' }
-  ];
 }
