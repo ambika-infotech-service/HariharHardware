@@ -16,11 +16,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
-      title: 'Harihar Hardware - Premium Pipes, Valves & Fittings in Ahmedabad Since 2002',
-      description: 'Your trusted supplier for quality pipes, valves, fittings, and plumbing solutions in Ahmedabad, Gujarat since 2002. Premium quality hardware at competitive prices.',
-      keywords: 'hardware store Ahmedabad, pipes Gujarat, valves fittings, plumbing supplies, pipe fittings Ahmedabad, industrial supplies, Harihar Hardware',
-      ogTitle: 'Harihar Hardware - Premium Pipes, Valves & Fittings in Ahmedabad',
-      ogDescription: 'Quality Hardware & Pipe Fittings Since 2002. Your trusted supplier for pipes, valves, and plumbing solutions.',
+      title: 'Harihar Hardware Store in Gota - Pipes, Valves & Fittings in Ahmedabad Since 2002',
+      description: 'Visit Harihar Hardware store in Gota, Ahmedabad for quality pipes, valves, fittings, and plumbing solutions. Your trusted hardware supplier since 2002. Premium quality at competitive prices.',
+      keywords: 'hardware store gota, hardware store in gota, Gota Road hardware store, pipes Ahmedabad, valves fittings Ahmedabad, plumbing supplies Gota, hardware Gota Ahmedabad, Harihar Hardware Gota',
+      ogTitle: 'Harihar Hardware Store in Gota - Pipes & Fittings in Ahmedabad',
+      ogDescription: 'Quality Hardware & Pipe Fittings in Gota, Ahmedabad. Trusted supplier since 2002. Visit us at Gota Road for premium quality products.',
       ogUrl: 'https://hariharhardware.ambikainfotech.online/',
       canonical: 'https://hariharhardware.ambikainfotech.online/'
     });

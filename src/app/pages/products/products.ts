@@ -29,11 +29,11 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
-      title: 'Products - Harihar Hardware | Hardware, Pipes, Valves, Paints & More',
-      description: 'Browse our extensive range of hardware, plumbing, paints, construction materials, electrical products and more. Available in multiple sizes & brands. Bulk & retail orders accepted.',
-      keywords: 'hardware products, pipes, valves, fittings, paints, tools, fasteners, construction materials, Ahmedabad',
-      ogTitle: 'Products - Harihar Hardware | Complete Hardware Solutions',
-      ogDescription: 'Explore our complete range of hardware products including pipes, valves, tools, paints and accessories.',
+      title: 'Products - Harihar Hardware Store in Gota | Pipes, Valves, Paints & Hardware',
+      description: 'Shop our complete range of hardware, pipes, valves, fittings, paints, tools, and construction materials at Harihar Hardware store in Gota, Ahmedabad. Bulk and retail orders available.',
+      keywords: 'hardware store Gota products, pipes Gota, valves fittings Ahmedabad, paints Gota Road, construction materials hardware, tools Gota, hardware store in Gota Ahmedabad, plumbing supplies Gota',
+      ogTitle: 'Products - Harihar Hardware Store in Gota | Complete Solutions',
+      ogDescription: 'Explore our extensive product range at Harihar Hardware store in Gota. Pipes, valves, tools, paints, and more.',
       ogUrl: 'https://hariharhardware.ambikainfotech.online/products',
       canonical: 'https://hariharhardware.ambikainfotech.online/products'
     });

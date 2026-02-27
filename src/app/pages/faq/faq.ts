@@ -19,11 +19,11 @@ export class FaqComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
-      title: 'FAQs - Harihar Hardware | Frequently Asked Questions',
-      description: 'Find answers to common questions about Harihar Hardware & Paint in Ahmedabad. Learn about our products, services, location, working hours, and more.',
-      keywords: 'FAQ, frequently asked questions, Harihar Hardware, Gota Road, Ahmedabad, hardware store questions, plumbing supplies, business hours',
-      ogTitle: 'Frequently Asked Questions - Harihar Hardware',
-      ogDescription: 'Get answers to your questions about our products, services, location, and more.',
+      title: 'FAQs - Harihar Hardware Store in Gota | Answers to Your Questions',
+      description: 'Find answers to common questions about Harihar Hardware store in Gota, Ahmedabad. Learn about our location at Gota Road, products, services, working hours, and more.',
+      keywords: 'Harihar Hardware Gota FAQ, hardware store Gota Road questions, Gota hardware store hours, Harihar Hardware location, Gota Cross Road store, hardware store in Gota Ahmedabad, plumbing supplies FAQ',
+      ogTitle: 'Frequently Asked Questions - Harihar Hardware Store Gota',
+      ogDescription: 'Get answers about Harihar Hardware store in Gota - location, hours, products, and services.',
       ogUrl: 'https://hariharhardware.ambikainfotech.online/faq',
       canonical: 'https://hariharhardware.ambikainfotech.online/faq'
     });

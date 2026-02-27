@@ -18,11 +18,11 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
-      title: 'Contact Us - Harihar Hardware | Get in Touch for Hardware Supplies',
-      description: 'Contact Harihar Hardware in Ahmedabad for all your pipe, valve, and fitting needs. Visit us at Gota, call +919898659470, or send us a message for a quick quote.',
-      keywords: 'contact Harihar Hardware, hardware store Gota, Ahmedabad contact, pipes valves Ahmedabad, get quote, hardware supplies contact',
-      ogTitle: 'Contact Harihar Hardware - Get in Touch',
-      ogDescription: 'Contact us for all your pipe, valve, and fitting needs. Call +919898659470 or visit us in Gota, Ahmedabad.',
+      title: 'Contact Harihar Hardware Store - Gota Road, Ahmedabad | Get Quotes',
+      description: 'Contact Harihar Hardware store in Gota, Ahmedabad at Gota Cross Road, opposite Ambika Dalvada. Call +919898659470 for pipes, valves, and fittings. Request a quote today.',
+      keywords: 'contact hardware store Gota, Harihar Hardware Gota contact, hardware store in Gota Ahmedabad contact, Gota Road hardware store number, pipes Gota contact, hardware supplies Gota, Gota Cross Road store contact',
+      ogTitle: 'Contact Harihar Hardware - Hardware Store in Gota, Ahmedabad',
+      ogDescription: 'Visit Harihar Hardware store in Gota or call +919898659470. Located at Gota Cross Road, opposite Ambika Dalvada.',
       ogUrl: 'https://hariharhardware.ambikainfotech.online/contact',
       canonical: 'https://hariharhardware.ambikainfotech.online/contact'
     });

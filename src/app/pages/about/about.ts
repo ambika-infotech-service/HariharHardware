@@ -14,11 +14,11 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
-      title: 'About Us - Harihar Hardware | Trusted Hardware Supplier Since 2002',
-      description: 'Learn about Harihar Hardware, Ahmedabad\'s trusted supplier of pipes, valves, and fittings since 2002. Over 20 years of experience in providing quality hardware and exceptional customer service.',
-      keywords: 'about Harihar Hardware, hardware store Ahmedabad, trusted supplier, established 2002, quality hardware, customer service',
-      ogTitle: 'About Harihar Hardware - Trusted Supplier Since 2002',
-      ogDescription: 'Over 20 years of experience in providing quality pipes, valves, and fittings with exceptional customer service in Ahmedabad.',
+      title: 'About Harihar Hardware Store - Gota Road, Ahmedabad | 20+ Years Experience',
+      description: 'Discover Harihar Hardware store in Gota, Ahmedabad - your trusted supplier of quality pipes, valves, and fittings since 2002. Located at Gota Road, opposite Ambika Dalvada. Over 20 years serving contractors, builders, and homeowners.',
+      keywords: 'Harihar Hardware Gota, hardware store Gota Road, Gota hardware store, hardware store in Gota Ahmedabad, pipes Gota, trusted hardware supplier Gota, Gota Cross Road hardware, established hardware store',
+      ogTitle: 'About Harihar Hardware - Hardware Store in Gota, Ahmedabad',
+      ogDescription: 'Learn about our 20+ years of experience at our Gota Road hardware store in Ahmedabad. Premium quality pipes, valves, and fittings.',
       ogUrl: 'https://hariharhardware.ambikainfotech.online/about',
       canonical: 'https://hariharhardware.ambikainfotech.online/about'
     });
