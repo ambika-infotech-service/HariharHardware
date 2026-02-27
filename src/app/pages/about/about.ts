@@ -26,8 +26,9 @@ export class AboutComponent implements OnInit {
     });
 
     // Add JSON-LD structured data
-    this.jsonLd.addOrganizationSchema();
+    this.jsonLd.addGeoEnhancedOrganizationSchema();  // GEO: entity + knowsAbout
     this.jsonLd.addAggregateRatingSchema(4.8, 50);
+    this.jsonLd.addSpeakableSchema(['h1', 'h2', '.lead']); // AEO: voice
     this.jsonLd.addBreadcrumbSchema([
       { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
       { name: 'About', url: 'https://hariharhardware.ambikainfotech.online/about' }

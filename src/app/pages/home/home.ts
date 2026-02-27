@@ -30,8 +30,10 @@ export class HomeComponent implements OnInit {
     });
 
     // Add JSON-LD structured data
-    this.jsonLd.addOrganizationSchema();
+    this.jsonLd.addWebsiteSchema();                  // AEO: sitelinks searchbox
+    this.jsonLd.addGeoEnhancedOrganizationSchema();  // GEO: entity + knowsAbout
     this.jsonLd.addLocalBusinessSchema();
+    this.jsonLd.addSpeakableSchema(['h1', '.lead', '.brand-text']); // AEO: voice
     this.jsonLd.addBreadcrumbSchema([
       { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' }
     ]);

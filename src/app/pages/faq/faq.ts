@@ -40,6 +40,7 @@ export class FaqComponent implements OnInit {
       answer: item.answer
     }));
     this.jsonLd.addFaqSchema(faqs);
+    this.jsonLd.addSpeakableSchema(['h1', '.faq-question', '.accordion-button']); // AEO: voice
     this.jsonLd.addBreadcrumbSchema([
       { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
       { name: 'FAQ', url: 'https://hariharhardware.ambikainfotech.online/faq' }

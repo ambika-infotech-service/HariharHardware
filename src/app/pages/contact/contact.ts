@@ -34,6 +34,7 @@ export class ContactComponent implements OnInit {
     // Add JSON-LD structured data
     this.jsonLd.addContactSchema();
     this.jsonLd.addLocalBusinessSchema();
+    this.jsonLd.addSpeakableSchema(['h1', '.info-content h6', '.contact-detail']); // AEO: voice
     this.jsonLd.addBreadcrumbSchema([
       { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
       { name: 'Contact', url: 'https://hariharhardware.ambikainfotech.online/contact' }

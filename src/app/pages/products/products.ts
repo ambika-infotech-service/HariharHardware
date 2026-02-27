@@ -51,6 +51,7 @@ export class ProductsComponent implements OnInit {
       { name: 'Power Tools', description: 'Drilling machines, grinders, and cutting tools' },
       { name: 'Hand Tools', description: 'Hammers, screwdrivers, pliers, and spanners' }
     ]);
+    this.jsonLd.addSpeakableSchema(['h1', '.page-description', '.product-section-title']); // AEO
     this.jsonLd.addBreadcrumbSchema([
       { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
       { name: 'Products', url: 'https://hariharhardware.ambikainfotech.online/products' }

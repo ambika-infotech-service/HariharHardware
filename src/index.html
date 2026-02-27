@@ -18,6 +18,15 @@
     <meta name="author" content="Harihar Hardware & Paints" />
     <meta name="robots" content="index, follow" />
 
+    <!-- AI Engine Permissions (GEO) -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="GPTBot" content="index, follow" />
+    <meta name="PerplexityBot" content="index, follow" />
+    <meta name="Claude-Web" content="index, follow" />
+    <meta name="Google-Extended" content="index, follow" />
+    <meta name="CCBot" content="index, follow" />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta
@@ -49,7 +58,27 @@
     <link rel="canonical" href="https://hariharhardware.ambikainfotech.online/" />
     <link rel="icon" href="favicon.ico" />
 
-    <!-- Organization Schema -->
+    <!-- WebSite Schema with SearchAction (AEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Harihar Hardware & Paints",
+        "url": "https://hariharhardware.ambikainfotech.online",
+        "description": "Online presence of Harihar Hardware & Paints — a trusted hardware store in Gota, Ahmedabad since 2002.",
+        "inLanguage": ["en", "gu", "hi", "mr"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://hariharhardware.ambikainfotech.online/products?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Organization Schema (GEO-enhanced) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -57,8 +86,16 @@
         "name": "Harihar Hardware & Paints",
         "url": "https://hariharhardware.ambikainfotech.online",
         "logo": "https://hariharhardware.ambikainfotech.online/assets/logo.png",
+        "foundingDate": "2002",
         "telephone": "+919898659470",
         "email": "hariharhardwareandpaints@gmail.com",
+        "description": "Harihar Hardware & Paints is a trusted hardware store in Gota, Ahmedabad, established in 2002. We supply quality pipes, valves, fittings, paints, tools, and plumbing materials to contractors, builders, and homeowners.",
+        "knowsAbout": [
+          "PVC Pipes", "CPVC Pipes", "UPVC Pipes", "GI Pipes", "HDPE Pipes", "PPR Pipes",
+          "Pipe Fittings", "Ball Valves", "Gate Valves", "Plumbing Supplies",
+          "Hardware Tools", "Power Tools", "Paints and Coatings", "Waterproofing",
+          "Construction Materials", "Sanitary Fittings"
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Krishna Complex, Opposite Ambika Dalvada, Gota Cross Road",
@@ -66,7 +103,12 @@
           "addressRegion": "Gujarat",
           "postalCode": "382481",
           "addressCountry": "IN"
-        }
+        },
+        "sameAs": [
+          "https://www.facebook.com/hariharhardware",
+          "https://www.instagram.com/hariharhardware",
+          "https://g.co/kgs/hariharhardware"
+        ]
       }
     </script>
 
@@ -137,6 +179,23 @@
           "contactType": "Customer Support",
           "telephone": "+919898659470",
           "email": "hariharhardwareandpaints@gmail.com"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".brand-text", "h1", ".lead"]
+        },
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "name": "Get a Quote",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://hariharhardware.ambikainfotech.online/contact",
+            "inLanguage": "en",
+            "actionPlatform": [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
         }
       }
     </script>

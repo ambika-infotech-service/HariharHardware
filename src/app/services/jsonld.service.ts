@@ -192,4 +192,68 @@ export class JsonLdService {
     };
     this.addJsonLd(schema);
   }
+
+  /** AEO: WebSite schema with SearchAction for sitelinks searchbox & direct answers */
+  addWebsiteSchema(): void {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: this.businessData.name,
+      url: this.baseUrl,
+      description: `${this.businessData.name} — trusted hardware store in Gota, Ahmedabad since 2002. Pipes, valves, fittings, paints, and tools.`,
+      inLanguage: ['en', 'gu', 'hi', 'mr'],
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${this.baseUrl}/products?q={search_term_string}`
+        },
+        'query-input': 'required name=search_term_string'
+      }
+    };
+    this.addJsonLd(schema);
+  }
+
+  /** AEO: Speakable schema for voice search assistants */
+  addSpeakableSchema(cssSelectors: string[] = ['h1', '.lead', '.page-description']): void {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: cssSelectors
+      },
+      url: this.baseUrl
+    };
+    this.addJsonLd(schema);
+  }
+
+  /** GEO: Organization schema enhanced with knowsAbout for AI entity understanding */
+  addGeoEnhancedOrganizationSchema(): void {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: this.businessData.name,
+      url: this.baseUrl,
+      foundingDate: '2002',
+      description: `${this.businessData.name} is a hardware store established in 2002, located in Gota, Ahmedabad, Gujarat, India. We supply PVC, CPVC, UPVC, GI, HDPE, and PPR pipes, pipe fittings, ball valves, gate valves, plumbing supplies, paints, power tools, and hardware accessories.`,
+      telephone: this.businessData.telephone,
+      email: this.businessData.email,
+      address: this.businessData.address,
+      knowsAbout: [
+        'PVC Pipes', 'CPVC Pipes', 'UPVC Pipes', 'GI Pipes', 'HDPE Pipes', 'PPR Pipes', 'SWR Pipes',
+        'Pipe Fittings', 'Elbows', 'Tees', 'Couplers',
+        'Ball Valves', 'Gate Valves', 'Check Valves', 'Butterfly Valves',
+        'Plumbing Supplies', 'Sanitary Fittings',
+        'Hardware Tools', 'Power Tools', 'Hand Tools',
+        'Paints', 'Waterproofing', 'Construction Materials'
+      ],
+      sameAs: [
+        'https://www.facebook.com/hariharhardware',
+        'https://www.instagram.com/hariharhardware',
+        'https://g.co/kgs/hariharhardware'
+      ]
+    };
+    this.addJsonLd(schema);
+  }
 }
