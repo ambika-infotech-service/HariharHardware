@@ -96,8 +96,9 @@
       opacity: 1;
     }
 
-    .brand-icon {
-      transform: rotate(15deg) scale(1.1);
+    .brand-logo-image {
+      transform: rotate(6deg) scale(1.06);
+      box-shadow: 0 6px 16px rgba(0, 204, 255, 0.35);
     }
 
     .brand-text {
@@ -115,11 +116,15 @@
   }
 }
 
-.brand-icon {
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  transition: transform var(--transition-base);
-  filter: drop-shadow(0 2px 4px rgba(0, 204, 255, 0.3));
+.brand-logo-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: var(--color-white);
+  padding: 4px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .brand-text {

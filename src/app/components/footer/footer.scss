@@ -22,4 +22,20 @@
   i {
     color: var(--color-primary);
   }
+
+  .footer-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: contain;
+    background: var(--color-white);
+    padding: 4px;
+    margin-right: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    vertical-align: middle;
+  }
+
+  .footer-brand-text {
+    vertical-align: middle;
+  }
 }
