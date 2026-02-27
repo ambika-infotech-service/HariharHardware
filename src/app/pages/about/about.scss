@@ -1,7 +1,200 @@
 .page-header {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  position: relative;
+  background: linear-gradient(135deg,
+    var(--color-secondary) 0%,
+    #1a4d5e 50%,
+    var(--color-primary-dark) 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
   color: white;
-  padding: var(--space-2xl) 0;
+  padding: 4rem 0;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 50%, rgba(0, 204, 255, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 70% 30%, rgba(0, 204, 255, 0.15) 0%, transparent 50%);
+    animation: pulseMove 12s ease-in-out infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.5;
+    animation: gridMove 20s linear infinite;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .lead {
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+    animation: fadeInUp 1s ease-out 0.2s both;
+  }
+
+  // Animated background elements
+  .animated-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 204, 255, 0.12) 0%, transparent 70%);
+      filter: blur(30px);
+
+      &:nth-child(1) {
+        width: 250px;
+        height: 250px;
+        top: -80px;
+        right: 10%;
+        animation: floatAround 22s ease-in-out infinite;
+      }
+
+      &:nth-child(2) {
+        width: 200px;
+        height: 200px;
+        bottom: -60px;
+        left: 15%;
+        animation: floatAround 18s ease-in-out infinite reverse;
+      }
+
+      &:nth-child(3) {
+        width: 180px;
+        height: 180px;
+        top: 50%;
+        left: -50px;
+        animation: floatAround 25s ease-in-out infinite 5s;
+      }
+    }
+
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: particleRise linear infinite;
+
+      &:nth-child(4) { left: 20%; animation-duration: 18s; animation-delay: 0s; }
+      &:nth-child(5) { left: 40%; animation-duration: 22s; animation-delay: 3s; }
+      &:nth-child(6) { left: 60%; animation-duration: 20s; animation-delay: 6s; }
+      &:nth-child(7) { left: 80%; animation-duration: 19s; animation-delay: 2s; }
+    }
+  }
+
+  .shimmer-line {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    animation: shimmerSlide 12s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes pulseMove {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes gridMove {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(40px);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatAround {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(40px, -30px) scale(1.1);
+    }
+    66% {
+      transform: translate(-30px, -50px) scale(0.9);
+    }
+  }
+
+  @keyframes particleRise {
+    0% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes shimmerSlide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
 }
 
 .story-section {
