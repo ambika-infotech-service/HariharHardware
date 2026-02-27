@@ -206,30 +206,30 @@ export class LanguageService {
         }
       },
       about: {
-        title: 'About Harihar Hardware',
-        established: 'Established in 2002',
+        title: 'Harihar Hardware & Paints, Gota',
+        established: 'Serving Ahmedabad Since 2002',
         story: {
-          p1: 'Harihar Hardware has been a trusted name in the hardware and pipe fittings industry for over two decades. What started as a small local supplier has grown into a reliable source for contractors, plumbers, and builders across the region.',
-          p2: 'We specialize in providing quality pipes, fittings, valves, and plumbing supplies. Our focus has always been on maintaining good stock levels of commonly needed items, sourcing from reputable manufacturers, and offering reliable service.',
-          p3: 'Whether you need standard fittings for a residential project or specialized industrial components, we work to fulfill your requirements efficiently.'
+          p1: 'Harihar Hardware & Paint is a well-established and trusted hardware store located at Gota Road, Ahmedabad, serving customers since 2002.',
+          p2: 'With over two decades of industry experience, we have built a strong reputation as a reliable supplier of hardware items, pipes, fittings, plumbing materials, and paint products for residential, commercial, and industrial needs.',
+          p3: 'What began as a small local hardware shop has grown into a one-stop destination for contractors, plumbers, builders, electricians, and homeowners across Ahmedabad. Our success is driven by quality products, fair pricing, and dependable service.'
         },
         why: {
-          title: 'Why Choose Us',
+          title: 'Why Choose Harihar Hardware & Paint',
           experience: {
-            title: '22+ Years Experience',
-            desc: 'Deep knowledge of products and industry requirements'
+            title: '20+ Years of Experience',
+            desc: 'Proven expertise in hardware, plumbing, and building materials'
           },
           quality: {
-            title: 'Quality Products',
-            desc: 'We source from established, trusted manufacturers'
+            title: 'Trusted Brands',
+            desc: 'Quality products sourced from reputed manufacturers'
           },
           service: {
-            title: 'Personal Service',
-            desc: 'Direct communication, quick responses, practical solutions'
+            title: 'Customer-Focused Service',
+            desc: 'Knowledgeable staff, honest advice, and prompt support'
           },
           stock: {
-            title: 'Ready Inventory',
-            desc: 'Good stock of common items for immediate supply'
+            title: 'Convenient Location',
+            desc: 'Gota Cross Road, opposite Ambika Dalvada, easy access'
           }
         }
       },
