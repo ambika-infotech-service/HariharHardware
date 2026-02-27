@@ -1,6 +1,8 @@
 <!-- Hero Section -->
 <section class="hero">
+  <!-- Background Animation Layers -->
   <div class="floating-shapes"></div>
+
   <div class="animated-bg">
     <div class="particle"></div>
     <div class="particle"></div>
@@ -10,7 +12,53 @@
     <div class="particle"></div>
     <div class="wave"></div>
   </div>
+
   <div class="shimmer"></div>
+
+  <!-- Geometric Shapes -->
+  <div class="geometric-shapes">
+    <div class="shape square"></div>
+    <div class="shape triangle"></div>
+    <div class="shape hexagon"></div>
+    <div class="shape circle"></div>
+  </div>
+
+  <!-- Glowing Nodes -->
+  <div class="glow-nodes">
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+    <div class="node"></div>
+  </div>
+
+  <!-- Light Rays -->
+  <div class="light-rays">
+    <div class="ray"></div>
+    <div class="ray"></div>
+    <div class="ray"></div>
+    <div class="ray"></div>
+    <div class="ray"></div>
+    <div class="ray"></div>
+  </div>
+
+  <!-- Depth Layers for Parallax -->
+  <div class="depth-layer layer-1">
+    @for (i of [1,2,3,4,5]; track i) {
+      <div class="float-element" [style.left.%]="15 * i" [style.top.%]="20 * i"></div>
+    }
+  </div>
+  <div class="depth-layer layer-2">
+    @for (i of [1,2,3,4]; track i) {
+      <div class="float-element" [style.left.%]="20 * i" [style.top.%]="25 * i"></div>
+    }
+  </div>
+  <div class="depth-layer layer-3">
+    @for (i of [1,2,3]; track i) {
+      <div class="float-element" [style.left.%]="30 * i" [style.top.%]="30 * i"></div>
+    }
+  </div>
+
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-8 mx-auto text-center">
