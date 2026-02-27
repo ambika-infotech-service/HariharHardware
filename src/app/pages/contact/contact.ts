@@ -3,6 +3,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
+import { JsonLdService } from '../../services/jsonld.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,6 +16,7 @@ export class ContactComponent implements OnInit {
   private languageService = inject(LanguageService);
   private sanitizer = inject(DomSanitizer);
   private seo = inject(SeoService);
+  private jsonLd = inject(JsonLdService);
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
@@ -26,6 +28,14 @@ export class ContactComponent implements OnInit {
       ogUrl: 'https://hariharhardware.ambikainfotech.online/contact',
       canonical: 'https://hariharhardware.ambikainfotech.online/contact'
     });
+
+    // Add JSON-LD structured data
+    this.jsonLd.addContactSchema();
+    this.jsonLd.addLocalBusinessSchema();
+    this.jsonLd.addBreadcrumbSchema([
+      { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
+      { name: 'Contact', url: 'https://hariharhardware.ambikainfotech.online/contact' }
+    ]);
   }
 
   protected submitted = signal(false);

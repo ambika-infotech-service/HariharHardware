@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
+import { JsonLdService } from '../../services/jsonld.service';
 
 @Component({
   selector: 'app-about',
@@ -11,6 +12,7 @@ import { SeoService } from '../../services/seo.service';
 export class AboutComponent implements OnInit {
   private languageService = inject(LanguageService);
   private seo = inject(SeoService);
+  private jsonLd = inject(JsonLdService);
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
@@ -22,6 +24,14 @@ export class AboutComponent implements OnInit {
       ogUrl: 'https://hariharhardware.ambikainfotech.online/about',
       canonical: 'https://hariharhardware.ambikainfotech.online/about'
     });
+
+    // Add JSON-LD structured data
+    this.jsonLd.addOrganizationSchema();
+    this.jsonLd.addAggregateRatingSchema(4.8, 50);
+    this.jsonLd.addBreadcrumbSchema([
+      { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
+      { name: 'About', url: 'https://hariharhardware.ambikainfotech.online/about' }
+    ]);
   }
 
   translate(key: string): any {

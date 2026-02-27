@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
+import { JsonLdService } from '../../services/jsonld.service';
 import { InViewDirective } from '../../directives/in-view.directive';
 
 @Component({
@@ -13,6 +14,7 @@ import { InViewDirective } from '../../directives/in-view.directive';
 export class HomeComponent implements OnInit {
   private languageService = inject(LanguageService);
   private seo = inject(SeoService);
+  private jsonLd = inject(JsonLdService);
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
@@ -24,6 +26,13 @@ export class HomeComponent implements OnInit {
       ogUrl: 'https://hariharhardware.ambikainfotech.online/',
       canonical: 'https://hariharhardware.ambikainfotech.online/'
     });
+
+    // Add JSON-LD structured data
+    this.jsonLd.addOrganizationSchema();
+    this.jsonLd.addLocalBusinessSchema();
+    this.jsonLd.addBreadcrumbSchema([
+      { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' }
+    ]);
   }
 
   translate(key: string): any {

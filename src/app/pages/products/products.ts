@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
+import { JsonLdService } from '../../services/jsonld.service';
 import { ProductsService, ProductSection } from '../../services/products.service';
 
 @Component({
@@ -15,6 +16,7 @@ import { ProductsService, ProductSection } from '../../services/products.service
 export class ProductsComponent implements OnInit {
   private languageService = inject(LanguageService);
   private seo = inject(SeoService);
+  private jsonLd = inject(JsonLdService);
   private productsService = inject(ProductsService);
 
   protected productSections = signal<any[]>([]);
@@ -37,6 +39,22 @@ export class ProductsComponent implements OnInit {
       ogUrl: 'https://hariharhardware.ambikainfotech.online/products',
       canonical: 'https://hariharhardware.ambikainfotech.online/products'
     });
+
+    // Add JSON-LD structured data
+    this.jsonLd.addProductSchema([
+      { name: 'Pipes', description: 'PVC, CPVC, UPVC, GI, HDPE, and PPR pipes' },
+      { name: 'Pipe Fittings', description: 'Elbows, tees, couplers, reducers, unions, and more' },
+      { name: 'Valves & Taps', description: 'Ball valves, gate valves, and various tap types' },
+      { name: 'Hardware Accessories', description: 'Fasteners, nails, screws, nuts, and bolts' },
+      { name: 'Plumbing Supplies', description: 'Complete plumbing materials and accessories' },
+      { name: 'Paints & Coatings', description: 'Interior and exterior paint solutions' },
+      { name: 'Power Tools', description: 'Drilling machines, grinders, and cutting tools' },
+      { name: 'Hand Tools', description: 'Hammers, screwdrivers, pliers, and spanners' }
+    ]);
+    this.jsonLd.addBreadcrumbSchema([
+      { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
+      { name: 'Products', url: 'https://hariharhardware.ambikainfotech.online/products' }
+    ]);
 
     this.productSections.set(this.productsService.getProductSections());
   }

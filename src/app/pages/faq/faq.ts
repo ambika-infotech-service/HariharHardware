@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
+import { JsonLdService } from '../../services/jsonld.service';
 
 interface FaqItem {
   question: string;
@@ -16,6 +17,7 @@ interface FaqItem {
 export class FaqComponent implements OnInit {
   private languageService = inject(LanguageService);
   private seo = inject(SeoService);
+  private jsonLd = inject(JsonLdService);
 
   ngOnInit(): void {
     this.seo.updateMetaTags({
@@ -27,6 +29,17 @@ export class FaqComponent implements OnInit {
       ogUrl: 'https://hariharhardware.ambikainfotech.online/faq',
       canonical: 'https://hariharhardware.ambikainfotech.online/faq'
     });
+
+    // Add FAQ schema with actual FAQ items
+    const faqs = this.faqItems.map(item => ({
+      question: item.question,
+      answer: item.answer
+    }));
+    this.jsonLd.addFaqSchema(faqs);
+    this.jsonLd.addBreadcrumbSchema([
+      { name: 'Home', url: 'https://hariharhardware.ambikainfotech.online/' },
+      { name: 'FAQ', url: 'https://hariharhardware.ambikainfotech.online/faq' }
+    ]);
   }
 
   translate(key: string): any {
