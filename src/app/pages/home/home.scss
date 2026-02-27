@@ -606,6 +606,25 @@
 .value-props {
   background: var(--color-white);
 
+  .card {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  &.in-view {
+    .col-md-4:nth-child(1) .card {
+      animation-delay: 0.1s;
+    }
+
+    .col-md-4:nth-child(2) .card {
+      animation-delay: 0.2s;
+    }
+
+    .col-md-4:nth-child(3) .card {
+      animation-delay: 0.3s;
+    }
+  }
+
   .icon-circle {
     width: 80px;
     height: 80px;
@@ -623,11 +642,44 @@
   }
 
   .card {
+    position: relative;
+    overflow: hidden;
     transition: transform var(--transition-base), box-shadow var(--transition-base);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+      );
+      opacity: 0;
+    }
 
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+
+      &::after {
+        opacity: 1;
+        animation: shimmerSweep 1.2s ease;
+      }
+    }
+  }
+
+  &.in-view {
+    .card {
+      animation: cardReveal 0.8s ease both;
+    }
+
+    .icon-circle {
+      animation: iconPulse 6s ease-in-out infinite;
     }
   }
 }
@@ -638,13 +690,41 @@
     padding: var(--space-xl);
     border-radius: var(--radius-md);
     text-align: center;
-    transition: all var(--transition-base);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background var(--transition-base);
     box-shadow: var(--shadow-sm);
     height: 100%;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(16px);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+      );
+      opacity: 0;
+    }
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+      border-color: rgba(0, 204, 255, 0.25);
+      background: linear-gradient(135deg, rgba(0, 204, 255, 0.06), rgba(0, 0, 0, 0) 60%);
+
+      &::after {
+        opacity: 1;
+        animation: shimmerSweep 1.2s ease;
+      }
     }
 
     .category-icon {
@@ -656,10 +736,16 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto var(--space-lg);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
 
       i {
         font-size: 1.8rem;
         color: var(--color-white);
+      }
+
+      &:hover .category-icon {
+        transform: translateY(-2px) scale(1.08) rotate(1deg);
+        box-shadow: 0 10px 20px rgba(0, 204, 255, 0.25);
       }
     }
 
@@ -667,6 +753,73 @@
       color: var(--color-secondary);
       margin: 0;
     }
+  }
+
+  &.in-view {
+    .col-md-4:nth-child(1) .category-card,
+    .col-md-4:nth-child(2) .category-card,
+    .col-md-4:nth-child(3) .category-card {
+      animation-delay: 0.1s;
+    }
+
+    .col-md-4:nth-child(4) .category-card,
+    .col-md-4:nth-child(5) .category-card,
+    .col-md-4:nth-child(6) .category-card {
+      animation-delay: 0.25s;
+    }
+
+    .category-card {
+      animation: cardReveal 0.8s ease both;
+    }
+
+    .category-icon {
+      animation: iconPulse 6s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerSweep {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(240%);
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .value-props .card,
+  .categories .category-card,
+  .value-props .icon-circle,
+  .categories .category-icon {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .value-props .card::after,
+  .categories .category-card::after {
+    display: none;
   }
 }
 

@@ -88,7 +88,7 @@
 </section>
 
 <!-- Value Propositions -->
-<section class="value-props py-5">
+<section class="value-props py-5" appInView>
   <div class="container">
     <div class="row g-4">
       @for (prop of valueProps; track prop.key) {
@@ -113,7 +113,7 @@
 </section>
 
 <!-- Product Categories -->
-<section class="categories py-5 bg-light">
+<section class="categories py-5 bg-light" appInView>
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="fw-bold">{{ translate('home.categories.title') }}</h2>
